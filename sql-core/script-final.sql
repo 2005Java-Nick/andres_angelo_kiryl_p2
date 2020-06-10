@@ -1,3 +1,6 @@
+drop schema if exists readifined cascade;
+create schema readifined;
+
 drop table if exists readifined.person cascade;
 create table readifined.person(
 	id serial, 
@@ -32,10 +35,28 @@ create table readifined.tag(
 drop table if exists readifined.book_tags cascade;
 create table readifined.book_tags(
 	id serial,
-	book_id integer,
-	tag_id integer,
+	book_id integer not null,
+	tag_id integer not null,
 	constraint book_tags_id_pk primary key (id),
 	constraint book_tags_book_id_fk foreign key (book_id) references readifined.book(id) on delete cascade on update cascade,
 	constraint book_tags_tag_id_fk foreign key (tag_id) references readifined.tag(id) on delete cascade on update cascade
+);
+
+drop table if exists readifined.review cascade;
+create table readifined.review (
+	id serial,
+	review_body varchar(1000) not null,
+	rating integer not null,
+	constraint review_id_pk primary key (id)
+);
+
+drop table if exists readifined.book_reviews cascade;
+create table readifined.book_reviews (
+	id serial,
+	review_id integer not null,
+	book_id integer not null,
+	constraint book_reviews_id_pk primary key (id),
+	constraint book_reviews_review_id_fk foreign key (review_id) references readifined.review(id) on delete cascade on update cascade, 
+	constraint book_reviews_book_id_fk foreign key (book_id) references readifined.book(id) on delete cascade on update cascade
 );
 
