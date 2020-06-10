@@ -1,7 +1,0 @@
-Hello, World!
-
-Add a line through a branch on Git
-
-Andres: The repo works!
-
-Angelo:

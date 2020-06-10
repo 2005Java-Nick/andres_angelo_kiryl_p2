@@ -1,7 +1,0 @@
-Hello, World!
-
-Add a line to this file:
-
-Andres:
-
-Angelo:
