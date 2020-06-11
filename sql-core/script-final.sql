@@ -60,3 +60,42 @@ create table readifined.book_reviews (
 	constraint book_reviews_book_id_fk foreign key (book_id) references readifined.book(id) on delete cascade on update cascade
 );
 
+drop table if exists readifined.address_type cascade;
+create table readifined.address_type(
+	id serial,
+	description varchar(50) not null,
+	constraint address_type_id primary key (id)
+);
+
+--drop table if exists zip_code cascade;
+--create table zip_code (
+--	id serial,
+--	zip integer(9) not null,
+--	constraint zip_code_id primary key (id)
+--);
+
+
+
+drop table if exists readifined.address cascade;
+create table readifined.address (
+	id serial,
+	st_number integer not null,
+	st_name varchar(50) not null,
+	city varchar(50) not null,
+	state varchar(50) not null,
+	zip_code integer not null,	
+	constraint address_id_pk primary key (id)	
+);
+
+drop table if exists readifined.registered_address cascade;
+create table readifined.registered_address (
+	id serial,
+	person_id integer not null,
+	address_id integer not null,
+	address_type_id integer not null,
+	constraint registered_address_id_pk primary key (id),
+	constraint registered_address_person_id_fk foreign key (person_id) references readifined.person(id) on delete cascade on update cascade, 
+	constraint registered_address_address_id_fk foreign key (address_id) references readifined.address(id) on delete cascade on update cascade,
+	constraint registered_address_address_type_id_fk foreign key (address_type_id) references readifined.address_type(id) on delete cascade on update cascade
+);
+
