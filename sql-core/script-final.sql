@@ -10,6 +10,7 @@ create table readifined.person(
 	user_password varchar(50) not null,
 	email varchar(100) not null unique,
 	date_of_birth date,
+	phone_number varchar(20),
 	constraint person_id_pk primary key (id)
 );
 
@@ -60,6 +61,7 @@ create table readifined.book_reviews (
 	constraint book_reviews_book_id_fk foreign key (book_id) references readifined.book(id) on delete cascade on update cascade
 );
 
+
 drop table if exists readifined.address_type cascade;
 create table readifined.address_type(
 	id serial,
@@ -98,4 +100,24 @@ create table readifined.registered_address (
 	constraint registered_address_address_id_fk foreign key (address_id) references readifined.address(id) on delete cascade on update cascade,
 	constraint registered_address_address_type_id_fk foreign key (address_type_id) references readifined.address_type(id) on delete cascade on update cascade
 );
+
+drop table if exists readifined.genre cascade;
+create table readifined.genre (
+	id serial,
+	genre varchar(100),
+	constraint genre_id_pk primary key (id)
+);
+
+drop table if exists readifined.book_genre cascade;
+create table readifined.book_genre (
+	id serial,
+	book_id integer,
+	genre_id integer,
+	constraint book_genre_id_fk primary key (id),
+	constraint book_genre_genre_id_fk foreign key (id) references readifined.genre(id) on delete cascade on update cascade,
+	constraint book_genre_book_id_fk foreign key (book_id) references readifined.book(id) on delete cascade on update cascade
+);
+
+
+
 
