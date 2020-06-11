@@ -118,6 +118,49 @@ create table readifined.book_genre (
 	constraint book_genre_book_id_fk foreign key (book_id) references readifined.book(id) on delete cascade on update cascade
 );
 
+drop table if exists permissions cascade;
+create table readifined.permissions (
+	id serial,
+	permission_type varchar(100) not null,
+	constraint permissions_id_pk primary key (id)
+);
+
+drop table if exists user_roles cascade;
+create table readifined.user_roles(
+	id serial,
+	role_type varchar(50) not null,
+	constraint user_roles_id_pk primary key (id)
+);
+
+drop table if exists registered_role cascade;
+create table readifined.registered_role (
+	id serial,
+	person_id integer not null,
+	user_roles_id integer not null,
+	constraint registered_role_id_pk primary key(id),
+	constraint registered_role_person_id_fk foreign key (person_id) references readifined.person(id),
+	constraint registered_role_user_roles_id_fk foreign key (user_roles_id) references readifined.user_roles(id)
+);
 
 
 
+drop table if exists assigned_permissions cascade;
+create table readifined.assigned_permissions (
+	id serial,
+	permissions_id integer not null,
+	user_roles_id integer not null,
+	constraint assigned_permissions_id_pk primary key(id),
+	constraint assigned_permissions_permissions_id_fk foreign key (permissions_id) references readifined.permissions(id),
+	constraint assigned_permissions_user_roles_id_fk foreign key (user_roles_id) references readifined.user_roles(id)
+);
+
+
+INSERT INTO readifined.user_roles
+(role_type)
+VALUES('Admin'), ('Employee'), ('Customer'), ('Subscribed-Customer'), ('Author'), ('Guest');
+
+select * from user_roles;
+
+insert into readifined.permissions (permission_type) values ('Buy'), ('Sell'), ('View'), ('Edit'), ('Review');
+
+select * from permissions;
