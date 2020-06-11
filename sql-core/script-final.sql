@@ -10,6 +10,7 @@ create table readifined.person(
 	user_password varchar(50) not null,
 	email varchar(100) not null unique,
 	date_of_birth date,
+	phone_number varchar(20),
 	constraint person_id_pk primary key (id)
 );
 
@@ -76,4 +77,6 @@ create table readifined.book_genre (
 	constraint book_genre_genre_id_fk foreign key (id) references readifined.genre(id) on delete cascade on update cascade,
 	constraint book_genre_book_id_fk foreign key (book_id) references readifined.book(id) on delete cascade on update cascade
 );
+
+
 
