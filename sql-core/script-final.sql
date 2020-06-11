@@ -159,8 +159,53 @@ INSERT INTO readifined.user_roles
 (role_type)
 VALUES('Admin'), ('Employee'), ('Customer'), ('Subscribed-Customer'), ('Author'), ('Guest');
 
-select * from user_roles;
+select * from readifined.user_roles;
 
 insert into readifined.permissions (permission_type) values ('Buy'), ('Sell'), ('View'), ('Edit'), ('Review');
 
-select * from permissions;
+select * from readifined.permissions;
+
+--Assign Permissions Admin
+
+INSERT INTO readifined.assigned_permissions
+(user_roles_id, permissions_id)
+VALUES(1, 1),(1, 2),(1, 3),(1, 4),(1, 5);
+
+--Assign Permissions Employee
+
+INSERT INTO readifined.assigned_permissions
+(user_roles_id, permissions_id)
+VALUES(2, 4);
+
+--Assign Permissions Customer
+
+INSERT INTO readifined.assigned_permissions
+(user_roles_id, permissions_id)
+VALUES(3, 1), (3, 3);
+
+--Assign Permissions Subscribed-Customer
+
+INSERT INTO readifined.assigned_permissions
+(user_roles_id, permissions_id)
+VALUES(4, 1), (4, 3), (4, 5);
+
+--Assign Permissions Author
+
+INSERT INTO readifined.assigned_permissions
+(user_roles_id, permissions_id)
+values (5, 1), (5, 2),(5, 3);
+
+--Assign Permissions Guest
+
+INSERT INTO readifined.assigned_permissions
+(user_roles_id, permissions_id)
+VALUES(6, 3);
+
+select p.id, p.permission_type 
+	from readifined.user_roles ur, readifined.permissions p, readifined.assigned_permissions ap 
+		where ur.id = ap.user_roles_id 
+			and p.id = ap.permissions_id 
+			and ur.id = 2;
+			
+			
+			
