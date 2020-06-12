@@ -56,9 +56,11 @@ create table readifined.book_reviews (
 	id serial,
 	review_id integer not null,
 	book_id integer not null,
+	reviewer_id integer not null,
 	constraint book_reviews_id_pk primary key (id),
 	constraint book_reviews_review_id_fk foreign key (review_id) references readifined.review(id) on delete cascade on update cascade, 
-	constraint book_reviews_book_id_fk foreign key (book_id) references readifined.book(id) on delete cascade on update cascade
+	constraint book_reviews_book_id_fk foreign key (book_id) references readifined.book(id) on delete cascade on update cascade,
+	constraint book_reviews_reviewer_id_fk foreign key (reviewer_id) references readifined.person(id) on delete cascade on update cascade
 );
 
 
