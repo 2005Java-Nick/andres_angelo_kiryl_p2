@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Scope;
 import com.revature.readifined.util.SessionFactoryUtil;
 
 @Configuration
-@ComponentScan(value = "com.revature.readifined")
+@ComponentScan(value = "com.revature")
 public class AppConfig {
 	
 	private SessionFactoryUtil sessionFactoryUtil;
