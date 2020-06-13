@@ -1,0 +1,14 @@
+package com.revature.readifined.domain;
+
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+@Entity
+@Table(name = "book_genre")
+public class BookGenre implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+
+	
+}

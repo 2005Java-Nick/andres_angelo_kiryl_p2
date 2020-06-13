@@ -1,0 +1,85 @@
+package com.revature.readifined.domain;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "readifined.book_reviews")
+public class BookReview implements Serializable{
+
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id")
+	private int id;
+	@Column(name = "review_id")
+	private int reviewId;
+	@Column(name = "book_id")
+	private int bookId;
+	@Column(name = "reviewer_id")
+	private int reviewerId;
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public int getReview_id() {
+		return review_id;
+	}
+	public void setReview_id(int review_id) {
+		this.review_id = review_id;
+	}
+	public int getBook_id() {
+		return book_id;
+	}
+	public void setBook_id(int book_id) {
+		this.book_id = book_id;
+	}
+	public int getReviewer_id() {
+		return reviewer_id;
+	}
+	public void setReviewer_id(int reviewer_id) {
+		this.reviewer_id = reviewer_id;
+	}
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + book_id;
+		result = prime * result + id;
+		result = prime * result + review_id;
+		result = prime * result + reviewer_id;
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		BookReview other = (BookReview) obj;
+		if (book_id != other.book_id)
+			return false;
+		if (id != other.id)
+			return false;
+		if (review_id != other.review_id)
+			return false;
+		if (reviewer_id != other.reviewer_id)
+			return false;
+		return true;
+	}
+	
+	
+	
+}

@@ -1,0 +1,51 @@
+package com.revature.readifined.dao;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.revature.readifined.domain.BookTags;
+import com.revature.readifined.domain.Genre;
+
+public class GenreDAOImpl implements GenreDAO{
+
+    private SessionFactory sf;
+	
+	@Autowired
+	public void setSessionFactory(SessionFactory sessionFactory) {
+		this.sf = sessionFactory;
+	}
+	
+	@Override
+	public Genre getGenre(int id) {
+		Session sess = sf.openSession();
+		Genre g = sess.get(Genre.class, id);
+		sess.close();
+		return g;
+	}
+
+	@Override
+	public Genre getGenre(String value, String column) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void saveGenre(Genre g) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateGenre(Genre g) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteGenre(Genre g) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

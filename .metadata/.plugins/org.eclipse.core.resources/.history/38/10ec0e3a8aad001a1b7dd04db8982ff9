@@ -1,0 +1,7 @@
+package com.revature.readifined.domain;
+
+import java.io.Serializable;
+
+public class AssignedPermission implements Serializable{
+
+}

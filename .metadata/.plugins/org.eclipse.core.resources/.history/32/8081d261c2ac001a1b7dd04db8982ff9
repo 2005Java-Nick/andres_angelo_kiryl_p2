@@ -1,0 +1,26 @@
+package com.revature.readifined.domain;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+public class RegisteredAddress implements Serializable {
+
+	private static final long serialVersionUID = 5603528551790292602L;
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id")
+	private int id;
+	@Column(name = "person_id")
+	private int personId;
+	@Column(name = "address_id")
+	private int addressId;
+	@Column(name = "address_type_id")
+	private int addressTypeId;
+	
+	
+}

@@ -1,0 +1,47 @@
+package com.revature.readifined.dao;
+
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.revature.readifined.domain.Review;
+
+public class ReviewDAOImpl implements ReviewDAO {
+
+    private SessionFactory sf;
+	
+	@Autowired
+	public void setSessionFactory(SessionFactory sessionFactory) {
+		this.sf = sessionFactory;
+	}
+	
+	@Override
+	public Review getReview(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Review getReview(String value, String column) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void saveReview(Review r) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateReview(Review r) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteReview(Review r) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

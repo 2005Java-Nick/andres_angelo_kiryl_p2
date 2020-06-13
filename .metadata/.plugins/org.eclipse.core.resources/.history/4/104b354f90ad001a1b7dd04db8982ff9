@@ -1,0 +1,17 @@
+package com.revature.readifined.dao;
+
+
+import com.revature.readifined.domain.BookReview;
+
+	public interface BookReviewDAO {
+
+	public BookReview getBookReview(int id);
+	
+	public BookReview getBookReview(String value,String column);
+	
+	public void saveBookReview(BookReview br);
+	
+	public void updateBookReview(BookReview br);
+	
+	public void deleteBookReview(BookReview br);
+}
