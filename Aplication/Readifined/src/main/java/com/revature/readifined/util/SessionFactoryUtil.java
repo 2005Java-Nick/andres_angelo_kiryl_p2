@@ -59,6 +59,7 @@ public class SessionFactoryUtil {
 					.addAnnotatedClass(com.revature.readifined.domain.Person.class)
 					.addAnnotatedClass(com.revature.readifined.domain.Role.class)
 					.addAnnotatedClass(com.revature.readifined.domain.RegisteredRole.class)
+					.addAnnotatedClass(com.revature.readifined.domain.Book.class)
 					.getMetadataBuilder()
 					.applyImplicitNamingStrategy(ImplicitNamingStrategyJpaCompliantImpl.INSTANCE).build();
 			sf = metadata.getSessionFactoryBuilder().build();
