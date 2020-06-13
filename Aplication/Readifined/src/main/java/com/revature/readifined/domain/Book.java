@@ -11,8 +11,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "readifined.Book")
-public class Book implements Serializable{
+@Table(name = "readifined.book")
+public class Book implements Serializable{ 
 
 	private static final long serialVersionUID = -4256577406929484108L;
 	
@@ -114,8 +114,4 @@ public class Book implements Serializable{
 		return "Book [id=" + id + ", title=" + title + ", price=" + price + ", author=" + author + ", coverImg="
 				+ coverImg + ", book=" + book + "]";
 	}
-
-	
-	
-	
 }

@@ -11,10 +11,11 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import com.revature.readifined.domain.Address;
 import com.revature.readifined.domain.AddressType;
-
+@Component
 public class AddressTypeDAOImpl implements AddressTypeDAO {
 
 	public SessionFactory sf;
