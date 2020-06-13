@@ -38,9 +38,9 @@ public class BookDAOImpl implements BookDAO {
 		CriteriaBuilder cb = sess.getCriteriaBuilder();
 		CriteriaQuery<Book> cq = cb.createQuery(Book.class);
 		Root<Book> rootEntry = cq.from(Book.class);
-		CriteriaQuery<Book> all = cq.multiselect(rootEntry).where(cb.equal(rootEntry.get(column), value));
+		CriteriaQuery<Book> all = cq.select(rootEntry).where(cb.equal(rootEntry.get(column), value));
 		TypedQuery<Book> allQuery = sess.createQuery(all);
-		List<Book> list = allQuery.getResultList();
+		List<Book>list=allQuery.getResultList();
 		tx.commit();
 		sess.close();
 		return list.get(0);
@@ -53,7 +53,7 @@ public class BookDAOImpl implements BookDAO {
 		CriteriaBuilder cb = sess.getCriteriaBuilder();
 		CriteriaQuery<Book> cq = cb.createQuery(Book.class);
 		Root<Book> rootEntry = cq.from(Book.class);
-		CriteriaQuery<Book> all = cq.multiselect(rootEntry).where(cb.equal(rootEntry.get(column), value));
+		CriteriaQuery<Book> all = cq.select(rootEntry).where(cb.equal(rootEntry.get(column), value));
 		TypedQuery<Book> allQuery = sess.createQuery(all);
 		List<Book> list = allQuery.getResultList();
 		tx.commit();

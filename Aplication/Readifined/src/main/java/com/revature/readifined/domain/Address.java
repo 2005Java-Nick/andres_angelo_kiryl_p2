@@ -3,10 +3,14 @@ package com.revature.readifined.domain;
 import java.io.Serializable;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "readifined.address")
 public class Address implements Serializable {
 
 	private static final long serialVersionUID = -3067648909884731085L; 
@@ -14,9 +18,9 @@ public class Address implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
-	int id;
+	private int id;
 	@Column(name = "st_number")
-	private String streetNumber;
+	private int streetNumber;
 	@Column(name = "st_name")
 	private String streetName;
 	@Column(name = "city")
@@ -24,19 +28,17 @@ public class Address implements Serializable {
 	@Column(name = "state")
 	private String state;
 	@Column(name = "zip_code")
-	private int zipCode;	
-	
-	
+	private int zipCode;
 	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getStreetNumber() {
+	public int getStreetNumber() {
 		return streetNumber;
 	}
-	public void setStreetNumber(String streetNumber) {
+	public void setStreetNumber(int streetNumber) {
 		this.streetNumber = streetNumber;
 	}
 	public String getStreetName() {
@@ -63,7 +65,6 @@ public class Address implements Serializable {
 	public void setZipCode(int zipCode) {
 		this.zipCode = zipCode;
 	}
-	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -72,7 +73,7 @@ public class Address implements Serializable {
 		result = prime * result + id;
 		result = prime * result + ((state == null) ? 0 : state.hashCode());
 		result = prime * result + ((streetName == null) ? 0 : streetName.hashCode());
-		result = prime * result + ((streetNumber == null) ? 0 : streetNumber.hashCode());
+		result = prime * result + streetNumber;
 		result = prime * result + zipCode;
 		return result;
 	}
@@ -102,13 +103,17 @@ public class Address implements Serializable {
 				return false;
 		} else if (!streetName.equals(other.streetName))
 			return false;
-		if (streetNumber == null) {
-			if (other.streetNumber != null)
-				return false;
-		} else if (!streetNumber.equals(other.streetNumber))
+		if (streetNumber != other.streetNumber)
 			return false;
 		if (zipCode != other.zipCode)
 			return false;
 		return true;
 	}
+	@Override
+	public String toString() {
+		return "Address [id=" + id + ", streetNumber=" + streetNumber + ", streetName=" + streetName + ", city=" + city
+				+ ", state=" + state + ", zipCode=" + zipCode + "]";
+	}	
+
+	
 }

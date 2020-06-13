@@ -42,7 +42,7 @@ public class BookDAOImplTest {
 		p.setLastName("Toledo");
 		p.setUserName("DoomSlayer");
 		p.setUserPassword("1992Andres_");
-		p.setEmail("amtamusic@hotmail.com1");
+		p.setEmail("amtamusic@hotmail.com");
 		p.setPhoneNumber("7186199163");
 		pDAO.savePerson(p);
 		p=pDAO.getPerson(p.getUserName(),"userName");
@@ -82,7 +82,7 @@ public class BookDAOImplTest {
 	// Delete
 	@Test
 	public void testE() {
-		Book b = bDAO.getBook("It", "title");
+		Book b = bDAO.getBook("Test Book", "title");
 		bDAO.deleteBook(b);
 		Person p=new Person();
 		p=pDAO.getPerson("DoomSlayer","userName");
