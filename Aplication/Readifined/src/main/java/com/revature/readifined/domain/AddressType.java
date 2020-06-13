@@ -3,10 +3,14 @@ package com.revature.readifined.domain;
 import java.io.Serializable;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "readifined.address_type")
 public class AddressType implements Serializable {
 
 	private static final long serialVersionUID = 3825315473596318128L;
@@ -56,7 +60,4 @@ public class AddressType implements Serializable {
 			return false;
 		return true;
 	}
-	
-	
-	
 }
