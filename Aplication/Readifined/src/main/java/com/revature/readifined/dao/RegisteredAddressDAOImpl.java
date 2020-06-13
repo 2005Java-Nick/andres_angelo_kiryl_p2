@@ -11,10 +11,11 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import com.revature.readifined.domain.Address;
 import com.revature.readifined.domain.RegisteredAddress;
-
+@Component
 public class RegisteredAddressDAOImpl implements RegisteredAddressDAO {
 
     private SessionFactory sf;
@@ -33,7 +34,7 @@ public class RegisteredAddressDAOImpl implements RegisteredAddressDAO {
 	}
 
 	@Override
-	public RegisteredAddress getRegisteredAddress(String value, String column) {
+	public RegisteredAddress getRegisteredAddress(int value, String column) {
 		Session sess = sf.openSession();
 		Transaction tx = sess.beginTransaction();
 		CriteriaBuilder cb = sess.getCriteriaBuilder();

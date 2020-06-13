@@ -6,7 +6,7 @@ public interface RegisteredAddressDAO {
 
 public RegisteredAddress getRegisteredAddress(int id);
 	
-	public RegisteredAddress getRegisteredAddress(String value, String column);
+	public RegisteredAddress getRegisteredAddress(int value, String column);
 	
 	public void saveRegisteredAddress(RegisteredAddress ra);
 	
