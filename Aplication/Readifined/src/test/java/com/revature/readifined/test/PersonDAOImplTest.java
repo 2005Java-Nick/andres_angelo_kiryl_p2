@@ -8,12 +8,14 @@ import org.junit.runners.MethodSorters;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.web.WebAppConfiguration;
 import com.revature.readifined.config.AppConfig;
 import com.revature.readifined.dao.PersonDAOImpl;
 import com.revature.readifined.domain.Person;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = AppConfig.class)
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
+@WebAppConfiguration
 public class PersonDAOImplTest {
 
 	@Autowired

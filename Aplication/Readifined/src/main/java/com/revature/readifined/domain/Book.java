@@ -1,6 +1,7 @@
 package com.revature.readifined.domain;
 
 import java.io.Serializable;
+import java.util.Arrays;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -24,11 +25,11 @@ public class Book implements Serializable{
 	@Column(name = "price")
 	private double price;
 	@Column(name = "author")
-	private String author;
+	private int author;
 	@Column(name = "cover_img")
-	private byte coverImg;
+	private byte [] coverImg;
 	@Column(name = "book")
-	private byte book;
+	private byte [] book;
 	
 	
 	public int getId() {
@@ -49,31 +50,31 @@ public class Book implements Serializable{
 	public void setPrice(double price) {
 		this.price = price;
 	}
-	public String getAuthor() {
+	public int getAuthor() {
 		return author;
 	}
-	public void setAuthor(String author) {
+	public void setAuthor(int author) {
 		this.author = author;
 	}
-	public byte getCoverImg() {
+	public byte[] getCoverImg() {
 		return coverImg;
 	}
-	public void setCoverImg(byte coverImg) {
+	public void setCoverImg(byte[] coverImg) {
 		this.coverImg = coverImg;
 	}
-	public byte getBook() {
+	public byte[] getBook() {
 		return book;
 	}
-	public void setBook(byte book) {
+	public void setBook(byte[] book) {
 		this.book = book;
 	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((author == null) ? 0 : author.hashCode());
-		result = prime * result + book;
-		result = prime * result + coverImg;
+		result = prime * result + author;
+		result = prime * result + Arrays.hashCode(book);
+		result = prime * result + Arrays.hashCode(coverImg);
 		result = prime * result + id;
 		long temp;
 		temp = Double.doubleToLongBits(price);
@@ -81,6 +82,7 @@ public class Book implements Serializable{
 		result = prime * result + ((title == null) ? 0 : title.hashCode());
 		return result;
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -90,14 +92,11 @@ public class Book implements Serializable{
 		if (getClass() != obj.getClass())
 			return false;
 		Book other = (Book) obj;
-		if (author == null) {
-			if (other.author != null)
-				return false;
-		} else if (!author.equals(other.author))
+		if (author != other.author)
 			return false;
-		if (book != other.book)
+		if (!Arrays.equals(book, other.book))
 			return false;
-		if (coverImg != other.coverImg)
+		if (!Arrays.equals(coverImg, other.coverImg))
 			return false;
 		if (id != other.id)
 			return false;
