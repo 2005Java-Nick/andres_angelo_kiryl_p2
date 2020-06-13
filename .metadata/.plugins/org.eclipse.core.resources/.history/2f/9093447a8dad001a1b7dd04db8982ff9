@@ -1,0 +1,17 @@
+package com.revature.readifined.dao;
+
+import com.revature.readifined.domain.AddressType;
+import com.revature.readifined.domain.AssignedPermissions;
+
+public interface AssignedPermissionsDAO{
+
+	public AssignedPermissions  getAssignedPermissions();
+	
+    public AssignedPermissions getAssignedPermissions(String value, String column);
+	
+	public void saveAssignedPermissions(AssignedPermissions at);
+	
+	public void updateAssignedPermissions(AssignedPermissions at);
+	
+	public void deleteAssignedPermissions(AssignedPermissions at);
+}

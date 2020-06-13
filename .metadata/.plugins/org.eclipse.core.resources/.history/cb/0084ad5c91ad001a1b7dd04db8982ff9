@@ -1,0 +1,39 @@
+package com.revature.readifined.dao;
+
+import org.springframework.stereotype.Component;
+
+import com.revature.readifined.domain.BookReviews;
+@Component
+public class BookReviewDAOImpl implements BookReviewDAO {
+
+	@Override
+	public BookReviews getBookReview(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public BookReviews getBookReview(String value, String column) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void saveBookReview(BookReviews br) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateBookReview(BookReviews br) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteBookReview(BookReviews br) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

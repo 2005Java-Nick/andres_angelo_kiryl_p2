@@ -1,0 +1,18 @@
+package com.revature.readifined.dao;
+
+import com.revature.readifined.domain.Person;
+
+public interface AddressDAO {
+
+	public Address getAddress(int id);
+	
+	public Address getAddress(String value,String column);
+	
+	public void saveAddress(Address p);
+	
+	public void updateAddress(Address p);
+	
+	public void deleteAddress(Address p);
+
+	
+}

@@ -1,0 +1,11 @@
+package com.revature.readifined.domain;
+
+import java.io.Serializable;
+
+public class Address implements Serializable {
+
+	private static final long serialVersionUID = -3067648909884731085L; 
+	
+	
+	
+}

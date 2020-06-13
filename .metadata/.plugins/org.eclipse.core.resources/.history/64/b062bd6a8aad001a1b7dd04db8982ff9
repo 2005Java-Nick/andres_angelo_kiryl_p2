@@ -1,0 +1,76 @@
+package com.revature.readifined.domain;
+
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "readifined.assigned_permissions")
+public class AssignedPermission implements Serializable{
+
+	
+	@id
+	private static final long serialVersionUID = 1L;
+
+	private int id;
+	
+	private int permissionId;
+	
+	private int userRolesId;
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public int getPermissionId() {
+		return permissionId;
+	}
+
+	public void setPermissionId(int permissionId) {
+		this.permissionId = permissionId;
+	}
+
+	public int getUserRolesId() {
+		return userRolesId;
+	}
+
+	public void setUserRolesId(int userRolesId) {
+		this.userRolesId = userRolesId;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + id;
+		result = prime * result + permissionId;
+		result = prime * result + userRolesId;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		AssignedPermission other = (AssignedPermission) obj;
+		if (id != other.id)
+			return false;
+		if (permissionId != other.permissionId)
+			return false;
+		if (userRolesId != other.userRolesId)
+			return false;
+		return true;
+	}
+	
+	
+	
+}

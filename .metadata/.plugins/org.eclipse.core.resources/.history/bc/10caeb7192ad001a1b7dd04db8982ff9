@@ -1,0 +1,47 @@
+package com.revature.readifined.dao;
+
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.revature.readifined.domain.Genre;
+
+public class GenreDAOImpl implements GenreDAO{
+
+    private SessionFactory sf;
+	
+	@Autowired
+	public void setSessionFactory(SessionFactory sessionFactory) {
+		this.sf = sessionFactory;
+	}
+	
+	@Override
+	public Genre getGenre(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Genre getGenre(String value, String column) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void saveGenre(Genre g) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateGenre(Genre g) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteGenre(Genre g) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

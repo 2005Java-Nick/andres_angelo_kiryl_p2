@@ -1,0 +1,47 @@
+package com.revature.readifined.dao;
+
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.revature.readifined.domain.RegisteredAddress;
+
+public class RegisteredAddressDAOImpl implements RegisteredAddressDAO {
+
+    private SessionFactory sf;
+	
+	@Autowired
+	public void setSessionFactory(SessionFactory sessionFactory) {
+		this.sf = sessionFactory; 
+	}
+	
+	@Override
+	public RegisteredAddress getRegisteredAddress(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public RegisteredAddress getRegisteredAddress(String value, String column) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void saveRegisteredAddress(RegisteredAddress ra) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateRegisteredAddress(RegisteredAddress ra) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteRegisteredAddress(RegisteredAddress ra) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,6 @@
+package com.revature.readifined.dao;
+
+public class TagDAOImpl implements TagDAO{
+
+	
+}

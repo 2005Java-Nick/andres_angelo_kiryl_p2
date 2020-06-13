@@ -1,0 +1,51 @@
+package com.revature.readifined.dao;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.revature.readifined.domain.Book;
+import com.revature.readifined.domain.BookTags;
+
+public class BookTagsDAOImpl implements BookTagsDAO{
+	
+	private SessionFactory sf;
+	
+	@Autowired
+	public void setSessionFactory(SessionFactory sessionFactory) {
+		this.sf = sessionFactory;
+	}
+	
+	@Override
+	public BookTags getBookTags(int id) {
+		Session sess = sf.openSession();
+		BookTags bt = sess.get(BookTags.class, id);
+		sess.close();
+		return bt;
+	}
+
+	@Override
+	public BookTags getBookTags(String value, String column) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void saveBookTags(BookTags bt) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateBookTags(BookTags bt) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteBookTags(BookTags bt) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,53 @@
+package com.revature.readifined.dao;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.revature.readifined.domain.Address;
+import com.revature.readifined.domain.AddressType;
+
+public class AddressTypeDAOImpl implements AddressTypeDAO {
+
+	public SessionFactory sf;
+	
+	@Autowired
+	public void setSessionFactory(SessionFactory sessionFactory) {
+		this.sf = sessionFactory; 
+	}	
+	
+	@Override
+	public AddressType getAddressType(int id) {
+		Session sess = sf.openSession();
+		AddressType at = sess.get(AddressType.class, id);
+		sess.close();
+		return at;
+	}
+
+	@Override
+	public AddressType getAddressType(String value, String column) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void saveAddress(AddressType at) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateAddress(AddressType at) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteAddress(AddressType at) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+}

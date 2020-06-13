@@ -1,0 +1,37 @@
+package com.revature.readifined.dao;
+
+import com.revature.readifined.domain.AssignedPermissions;
+
+public class AssignedPermissionsDAOImpl implements AssignedPermissionsDAO {
+
+	@Override
+	public AssignedPermissions getAssignedPermissions(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public AssignedPermissions getAssignedPermissions(String value, String column) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void saveAssignedPermissions(AssignedPermissions at) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateAssignedPermissions(AssignedPermissions at) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteAssignedPermissions(AssignedPermissions at) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

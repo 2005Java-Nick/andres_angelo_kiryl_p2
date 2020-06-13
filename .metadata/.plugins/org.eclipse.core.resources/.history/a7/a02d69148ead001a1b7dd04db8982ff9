@@ -1,0 +1,48 @@
+package com.revature.readifined.dao;
+
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.revature.readifined.domain.AssignedPermissions;
+
+public class AssignedPermissionsDAOImpl implements AssignedPermissionsDAO {
+
+public SessionFactory sf;
+	
+	@Autowired
+	public void setSessionFactory(SessionFactory sessionFactory) {
+		this.sf = sessionFactory; 
+	}	
+	
+	
+	@Override
+	public AssignedPermissions getAssignedPermissions(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public AssignedPermissions getAssignedPermissions(String value, String column) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void saveAssignedPermissions(AssignedPermissions at) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateAssignedPermissions(AssignedPermissions at) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteAssignedPermissions(AssignedPermissions at) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

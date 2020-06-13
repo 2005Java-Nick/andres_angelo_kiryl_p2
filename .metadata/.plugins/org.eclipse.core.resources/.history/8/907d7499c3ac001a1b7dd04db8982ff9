@@ -1,0 +1,41 @@
+package com.revature.readifined.dao;
+
+import org.hibernate.SessionFactory;
+
+import com.revature.readifined.domain.Address;
+
+public class AddressDAOImpl implements AddressDAO {
+
+	private SessionFactory sf;
+	
+	@Override
+	public Address getAddress(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Address getAddress(String value, String column) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void saveAddress(Address a) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateAddress(Address a) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteAddress(Address a) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

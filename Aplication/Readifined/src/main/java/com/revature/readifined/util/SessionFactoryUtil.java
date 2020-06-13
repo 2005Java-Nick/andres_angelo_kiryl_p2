@@ -68,7 +68,7 @@ public class SessionFactoryUtil {
 					.addAnnotatedClass(com.revature.readifined.domain.BookTags.class)
 					.addAnnotatedClass(com.revature.readifined.domain.Genre.class)
 					.addAnnotatedClass(com.revature.readifined.domain.Permissions.class)
-					.addAnnotatedClass(com.revature.readifined.domain.TagName.class)
+					.addAnnotatedClass(com.revature.readifined.domain.Tag.class)
 					.addAnnotatedClass(com.revature.readifined.domain.Review.class)
 					.addAnnotatedClass(com.revature.readifined.domain.RegisteredAddress.class)
 					.getMetadataBuilder()
