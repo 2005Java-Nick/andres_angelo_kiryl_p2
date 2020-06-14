@@ -1,0 +1,12 @@
+
+
+.login-container {
+    height: 100vh;
+    background-image: url(../../../assets/bgimg2.jpg);
+
+    color:  white;
+}
+
+.input-container {
+    align-items: center;
+}
