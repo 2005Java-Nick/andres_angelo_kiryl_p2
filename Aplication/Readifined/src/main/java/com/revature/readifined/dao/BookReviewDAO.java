@@ -7,7 +7,7 @@ import com.revature.readifined.domain.BookReviews;
 
 	public BookReviews getBookReview(int id);
 	
-	public BookReviews getBookReview(String value,String column);
+	public BookReviews getBookReview(int value,String column);
 	
 	public void saveBookReview(BookReviews br);
 	

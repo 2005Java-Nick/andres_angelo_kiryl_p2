@@ -6,7 +6,7 @@ public interface BookTagsDAO {
 
     public BookTags getBookTags(int id);
 	
-	public BookTags getBookTags(String value,String column);
+	public BookTags getBookTags(int value,String column);
 	
 	public void saveBookTags(BookTags bt);
 	

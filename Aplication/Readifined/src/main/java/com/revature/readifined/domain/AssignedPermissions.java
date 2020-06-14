@@ -21,7 +21,7 @@ public class AssignedPermissions implements Serializable{
 	@Column(name = "permissions_id")
 	int permissionsId;
 	@Column(name = "user_roles_id")
-	int user_roles_id;
+	int userRolesId;
 	public int getId() {
 		return id;
 	}
@@ -34,19 +34,20 @@ public class AssignedPermissions implements Serializable{
 	public void setPermissionsId(int permissionsId) {
 		this.permissionsId = permissionsId;
 	}
-	public int getUser_roles_id() {
-		return user_roles_id;
+	public int getUserRolesId() {
+		return userRolesId;
 	}
-	public void setUser_roles_id(int user_roles_id) {
-		this.user_roles_id = user_roles_id;
+	public void setUserRolesId(int userRolesId) {
+		this.userRolesId = userRolesId;
 	}
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + id;
 		result = prime * result + permissionsId;
-		result = prime * result + user_roles_id;
+		result = prime * result + userRolesId;
 		return result;
 	}
 	@Override
@@ -62,13 +63,13 @@ public class AssignedPermissions implements Serializable{
 			return false;
 		if (permissionsId != other.permissionsId)
 			return false;
-		if (user_roles_id != other.user_roles_id)
+		if (userRolesId != other.userRolesId)
 			return false;
 		return true;
 	}
 	@Override
 	public String toString() {
-		return "AssignedPermissions [id=" + id + ", permissionsId=" + permissionsId + ", user_roles_id=" + user_roles_id
+		return "AssignedPermissions [id=" + id + ", permissionsId=" + permissionsId + ", user_roles_id=" + userRolesId
 				+ "]";
 	}
 	

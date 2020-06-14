@@ -11,10 +11,11 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
-
+import org.springframework.stereotype.Component;
 
 import com.revature.readifined.domain.BookTags;
 
+@Component
 public class BookTagsDAOImpl implements BookTagsDAO{
 	
 	private SessionFactory sf;
@@ -33,7 +34,7 @@ public class BookTagsDAOImpl implements BookTagsDAO{
 	}
 
 	@Override
-	public BookTags getBookTags(String value, String column) {
+	public BookTags getBookTags(int value, String column) {
 		Session sess = sf.openSession();
 		Transaction tx = sess.beginTransaction();
 		CriteriaBuilder cb = sess.getCriteriaBuilder();
