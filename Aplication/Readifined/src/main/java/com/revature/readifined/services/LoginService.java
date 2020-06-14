@@ -1,5 +1,7 @@
 package com.revature.readifined.services;
 
+import com.revature.readifined.domain.Role;
+
 public interface LoginService {
-	public boolean login(String username,String password);
+	public Role login(String username,String password);
 }
