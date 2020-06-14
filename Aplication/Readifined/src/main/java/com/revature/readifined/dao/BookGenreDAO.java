@@ -6,7 +6,7 @@ public interface BookGenreDAO {
 
     public BookGenre getBookGenre(int id);
 	
-	public BookGenre getBookGenre(String value,String column);
+	public BookGenre getBookGenre(int value,String column);
 	
 	public void saveBookGenre(BookGenre bg);
 	

@@ -34,7 +34,7 @@ public class BookGenreDAOImpl implements BookGenreDAO {
 	}
 
 	@Override
-	public BookGenre getBookGenre(String value, String column) {
+	public BookGenre getBookGenre(int value, String column) {
 		Session sess = sf.openSession();
 		Transaction tx = sess.beginTransaction();
 		CriteriaBuilder cb = sess.getCriteriaBuilder();
