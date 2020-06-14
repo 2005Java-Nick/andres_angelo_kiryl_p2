@@ -116,7 +116,7 @@ create table readifined.book_genre (
 	book_id integer,
 	genre_id integer,
 	constraint book_genre_id_fk primary key (id),
-	constraint book_genre_genre_id_fk foreign key (id) references readifined.genre(id) on delete cascade on update cascade,
+	constraint book_genre_genre_id_fk foreign key (genre_id) references readifined.genre(id) on delete cascade on update cascade,
 	constraint book_genre_book_id_fk foreign key (book_id) references readifined.book(id) on delete cascade on update cascade
 );
 
