@@ -34,7 +34,7 @@ public class BookReviewDAOImpl implements BookReviewDAO {
 	}
 
 	@Override
-	public BookReviews getBookReview(String value, String column) {
+	public BookReviews getBookReview(int value, String column) {
 		Session sess = sf.openSession();
 		Transaction tx = sess.beginTransaction();
 		CriteriaBuilder cb = sess.getCriteriaBuilder();

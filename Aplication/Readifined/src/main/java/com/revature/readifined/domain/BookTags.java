@@ -3,10 +3,14 @@ package com.revature.readifined.domain;
 import java.io.Serializable;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "readifined.book_tags")
 public class BookTags implements Serializable{
 
 	private static final long serialVersionUID = 3739097466270305276L;
