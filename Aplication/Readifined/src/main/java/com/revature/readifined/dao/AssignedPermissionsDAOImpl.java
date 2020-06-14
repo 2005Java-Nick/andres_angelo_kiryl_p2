@@ -34,7 +34,7 @@ public SessionFactory sf;
 	}
 
 	@Override
-	public AssignedPermissions getAssignedPermissions(String value, String column) {
+	public AssignedPermissions getAssignedPermissions(int value, String column) {
 		Session sess = sf.openSession();
 		Transaction tx = sess.beginTransaction();
 		CriteriaBuilder cb = sess.getCriteriaBuilder();

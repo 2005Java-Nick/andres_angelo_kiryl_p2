@@ -7,7 +7,7 @@ public interface AssignedPermissionsDAO{
 
 	public AssignedPermissions  getAssignedPermissions(int id);
 	
-    public AssignedPermissions getAssignedPermissions(String value, String column);
+    public AssignedPermissions getAssignedPermissions(int value, String column);
 	
 	public void saveAssignedPermissions(AssignedPermissions ap);
 	
