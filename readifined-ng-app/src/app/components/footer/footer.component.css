@@ -1,0 +1,35 @@
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: gray;
+    
+    color: white;;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: small;
+    margin: 0;
+
+  }
+
+  .email {
+    margin: 0;
+    padding: 0;
+  }
+
+  .name{
+    margin:0;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  #eLink {
+    color: white;
+  }
+
+  #eLink:hover {
+    color: #c9dac9;
+  }

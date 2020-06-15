@@ -1,10 +1,11 @@
 <div class="login-container">
+  <h2 class="login-title">Login</h2>
   <div class="input-container">
-      <label id="login-text">Login</label>
+      
       <div class="login-form">
         <input type="username" [(ngModel)]="username" id="inputUsername" class="form-control" placeholder="username"><br>
         <input type="password" [(ngModel)]="password" id="inputPassword" class="form-control" placeholder="password"><br>
-        <input (click)="login()" type="button" value="Submit">
+        <input (click)="login()" type="button" class="form-control" id="login-submit-btn" value="Submit">
       </div>
   </div>
 </div>
