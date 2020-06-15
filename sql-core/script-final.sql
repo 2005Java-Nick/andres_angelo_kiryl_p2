@@ -209,5 +209,5 @@ select p.id, p.permission_type
 			and p.id = ap.permissions_id 
 			and ur.id = 2;
 			
-			
+insert into readifined.person (id, first_name, last_name, user_name, user_password, email, date_of_birth, phone_number ) values (1,'test', 'test', 'test', 'test', 'test@teset.com', '2020-02-02', 'test');
 			

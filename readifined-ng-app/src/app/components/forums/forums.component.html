@@ -1,1 +1,11 @@
-<p>forums works!</p>
+<div class="forum-container">
+    <h2 class="forum-title">forum</h2>
+    <div class="input-container">
+        
+        <div class="forum-form">
+          <textarea [(ngModel)]="textbox" id="inputText" class="form-control" placeholder="write here"><br>
+          </textarea>
+          <input (click)="submitComment()" type="button" class="form-control" id="forum-submit-btn" value="Submit">
+        </div>
+    </div>
+</div>
