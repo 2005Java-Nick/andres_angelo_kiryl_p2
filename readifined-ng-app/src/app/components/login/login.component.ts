@@ -21,8 +21,8 @@ export class LoginComponent implements OnInit {
                  console.log(this.roleService.getCurrentRole());
                  localStorage.setItem('token', this.roleService.getCurrentRole().token);
                  if (this.roleService.getCurrentRole().verified) {
-                  this.router.navigate(['/home'], {replaceUrl: true});
-                }
+                    this.router.navigate(['/home'], {replaceUrl: true});
+                 }
             }
     );
   }

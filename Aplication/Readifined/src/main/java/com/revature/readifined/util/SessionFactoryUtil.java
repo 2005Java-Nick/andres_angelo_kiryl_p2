@@ -44,7 +44,7 @@ public class SessionFactoryUtil {
 			url = System.getenv("URL");
 			url = "jdbc:postgresql://" + url + ":5432/" + "localhost" + "?";
 			username = "postgres";
-			password = "Benjosan@613";
+			password = "1992Andres_";
 			Map<String, String> settings = new HashMap<String, String>();
 			settings.put("hibernate.connection.driver_class", "org.postgresql.Driver");
 			settings.put("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");

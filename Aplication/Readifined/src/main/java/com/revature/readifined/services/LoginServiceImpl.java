@@ -46,7 +46,7 @@ public class LoginServiceImpl implements LoginService{
 			{
 				if(user.getUserPassword().equals(password))
 				{
-					ses=new Session("session goes here",true);
+					ses=new Session("sessiongoeshere",true);
 					user.setToken(ses.getToken());
 					personDAOImpl.updatePerson(user);
 					return ses;
