@@ -1,0 +1,5 @@
+127.0.0.1 - - [15/Jun/2020:13:17:56 -0400] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [15/Jun/2020:13:17:57 -0400] "GET /Readifined/WEB-INF/classes/com/revature/readifined/util/SessionFactoryUtil.java HTTP/1.1" 404 858
+0:0:0:0:0:0:0:1 - - [15/Jun/2020:13:20:36 -0400] "POST /Readifined/login HTTP/1.1" 404 771
+0:0:0:0:0:0:0:1 - - [15/Jun/2020:13:36:09 -0400] "POST /Readifined/login HTTP/1.1" 404 771
+0:0:0:0:0:0:0:1 - - [15/Jun/2020:14:09:42 -0400] "POST /Readifined/login HTTP/1.1" 404 771

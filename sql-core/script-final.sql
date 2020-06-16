@@ -210,6 +210,7 @@ select p.id, p.permission_type
 			and p.id = ap.permissions_id 
 			and ur.id = 2;
 			
+k
 
 insert into readifined.genre
 (genre)

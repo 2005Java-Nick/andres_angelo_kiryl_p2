@@ -10,6 +10,7 @@
   padding: 0;
 }
 
+
 body, html {
     height: 100%;
 }
@@ -96,3 +97,5 @@ padding: .25rem;
   background: rgba(0,0,0,0.7);
   z-index: -1;
 }
+
+

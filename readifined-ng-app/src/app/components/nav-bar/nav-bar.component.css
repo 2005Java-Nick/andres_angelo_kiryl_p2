@@ -1,3 +1,4 @@
+
 h1 {
     height: 40px;
     padding: 20px;
@@ -7,4 +8,53 @@ h1 {
     background-color: black;
     border-bottom: white;
     border-bottom: solid;
+
+ul{
+    background-color: grey;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style-type: none;
+}
+
+li {
+    
+    float: left;
+}
+
+.contact {
+    float: right;
+}
+
+li a {
+   display: block;
+   color: white;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none; 
+    
+}
+
+a {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+li a:hover:not(.active) {
+   background-color: #555;     
+ }
+
+ .active {
+     background-color: rgb(29, 107, 64);
+ }
+
+ #home-icon {
+     height: 42px;
+     padding: 0 10px 0 10px;
+     margin-top: 2;
+ }
+  li .home-icon {
+    padding: 0;
+    margin: 0;
+
 }
