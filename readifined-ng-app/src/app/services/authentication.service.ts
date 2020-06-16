@@ -17,7 +17,7 @@ export class AuthenticationService {
     (
       this.LOGIN_URL,
       'username=' + username + '&' +
-      'password=' + password , {
+      'password=' + password, {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
         }

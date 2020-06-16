@@ -1,10 +1,11 @@
-<div class="login-container">
-  <div class="input-container">
-      <label id="login-text">Login</label>
-      <div class="login-form">
-        <input type="username" [(ngModel)]="username" id="inputUsername" class="form-control" placeholder="username"><br>
-        <input type="password" [(ngModel)]="password" id="inputPassword" class="form-control" placeholder="password"><br>
-        <input (click)="login()" type="button" value="Submit">
-      </div>
-  </div>
+<h2 class="login-title">L o g i n</h2>
+<div class="login-container align-items-center">
+
+        <input type="username" class="login-username" autofocus="true" required="true" [(ngModel)]="username" id="inputUsername" class="form-control" placeholder="username"><br>
+        <input type="password" class="login-password" required="true" [(ngModel)]="password" id="inputPassword" class="form-control" placeholder="password"><br>
+        <input (click)="login()" type="button" class="login-submit" value="Submit">
+        <a href="#" class="login-create-account">Create Account</a>
 </div>
+<a href="#" class="login-forgot-pass">forgot password?</a>
+<div class="underlay-photo"></div>
+<div class="underlay-black"></div> 

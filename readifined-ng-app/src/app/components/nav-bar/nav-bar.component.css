@@ -3,7 +3,8 @@ h1 {
     padding: 20px;
     margin:0;
     text-align: center;
-    text-decoration: underline;
     color: white;
-    background-color: grey;
+    background-color: black;
+    border-bottom: white;
+    border-bottom: solid;
 }

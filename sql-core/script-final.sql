@@ -11,6 +11,7 @@ create table readifined.person(
 	email varchar(100) not null unique,
 	date_of_birth date,
 	phone_number varchar(20),
+	session_token varchar(50),
 	constraint person_id_pk primary key (id)
 );
 
@@ -209,5 +210,233 @@ select p.id, p.permission_type
 			and p.id = ap.permissions_id 
 			and ur.id = 2;
 			
+
+insert into readifined.genre
+(genre)
+values('Fiction Books Literature');
+
+insert into readifined.genre
+(genre)
+values('Graphic Novels');
+
+insert into readifined.genre
+(genre)
+values('Horror');
+
+insert into readifined.genre
+(genre)
+values('Mystery Crime');
+
+insert into readifined.genre
+(genre)
+values('Poetry');
+
+insert into readifined.genre
+(genre)
+values('Romance Books');
+
+insert into readifined.genre
+(genre)
+values('Science Fiction Fantasy');
+
+insert into readifined.genre
+(genre)
+values('Thrillers');
+
+insert into readifined.genre
+(genre)
+values('Westerns');
+
+insert into readifined.genre
+(genre)
+values('Ages 0-2');
+
+insert into readifined.genre
+(genre)
+values('Ages 3-5');
+
+insert into readifined.genre
+(genre)
+values('Ages 6-8');
+
+insert into readifined.genre
+(genre)
+values('Ages 9-12');
+
+insert into readifined.genre
+(genre)
+values('Teens');
+
+insert into readifined.genre
+(genre)
+values('Childrens Books');
+
+insert into readifined.genre
+(genre)
+values('African Americans');
+
+insert into readifined.genre
+(genre)
+values('Antiques Collectibles');
+
+insert into readifined.genre
+(genre)
+values('Art, Architecture Photography');
+
+insert into readifined.genre
+(genre)
+values('Bibles Bible Studies');
+
+insert into readifined.genre
+(genre)
+values('Biography');
+
+insert into readifined.genre
+(genre)
+values('Business Books');
+
+insert into readifined.genre
+(genre)
+values('Christianity');
+
+insert into readifined.genre
+(genre)
+values('Computer Books Technology Books');
+
+insert into readifined.genre
+(genre)
+values('Cookbooks, Food Wine');
+
+insert into readifined.genre
+(genre)
+values('Crafts Hobbies Books');
+
+insert into readifined.genre
+(genre)
+values('Education Teaching');
+
+insert into readifined.genre
+(genre)
+values('Engineering');
+
+insert into readifined.genre
+(genre)
+values('Entertainment');
+
+insert into readifined.genre
+(genre)
+values('Foreign Languages');
+
+insert into readifined.genre
+(genre)
+values('Game Books');
+
+insert into readifined.genre
+(genre)
+values('Health Books, Diet Fitness Books');
+
+insert into readifined.genre
+(genre)
+values('History');
+
+insert into readifined.genre
+(genre)
+values('Home Garden');
+
+insert into readifined.genre
+(genre)
+values('Humor Books');
+
+insert into readifined.genre
+(genre)
+values('Judaism Judaica');
+
+insert into readifined.genre
+(genre)
+values('Law');
+
+insert into readifined.genre
+(genre)
+values('Medical Books');
+
+insert into readifined.genre
+(genre)
+values('New Age Spirituality');
+
+insert into readifined.genre
+(genre)
+values('Nonfiction');
+
+insert into readifined.genre
+(genre)
+values('Parenting Family');
+
+insert into readifined.genre
+(genre)
+values('Pets');
+
+insert into readifined.genre
+(genre)
+values('Philosophy');
+
+insert into readifined.genre
+(genre)
+values('Political Books Current Events Books');
+
+insert into readifined.genre
+(genre)
+values('Psychology Psychotherapy');
+
+insert into readifined.genre
+(genre)
+values('Reference');
+
+insert into readifined.genre
+(genre)
+values('Religion Books');
+
+insert into readifined.genre
+(genre)
+values('Science Nature');
+
+insert into readifined.genre
+(genre)
+values('Self Improvement');
+
+insert into readifined.genre
+(genre)
+values('Sex Relationships');
+
+insert into readifined.genre
+(genre)
+values('Social Sciences');
+
+insert into readifined.genre
+(genre)
+values('Sports Adventure');
+
+insert into readifined.genre
+(genre)
+values('Study Guides Test Prep');
+
+insert into readifined.genre
+(genre)
+values('Travel');
+
+insert into readifined.genre
+(genre)
+values('True Crime');
+
+insert into readifined.genre
+(genre)
+values('Weddings');
+
+insert into readifined.genre
+(genre)
+values('Womens Studies');
+
+select * from readifined.genre;
 			
-			
+INSERT INTO readifined.person
+(first_name, last_name, user_name, user_password, email, date_of_birth, phone_number)
+VALUES('test', 'test', 'test', 'test', 'test@gmail.com', '2002-02-02', '7165244256');
