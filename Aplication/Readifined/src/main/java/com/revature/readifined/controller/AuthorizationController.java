@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.revature.readifined.domain.Session;
 import com.revature.readifined.services.AuthorizationService;
-import com.revature.readifined.services.LoginService;
 
 @Controller
 public class AuthorizationController {
@@ -25,7 +24,6 @@ private AuthorizationService authorizationService;
 	@RequestMapping(path = "/authorize", method = RequestMethod.POST)
 	@ResponseBody
 	public Session getlogin(@RequestParam(name = "session", required = false) String sess,@RequestParam(name = "username", required = true) String username) {
-		System.out.println(sess);
 		if (sess==null)
 		{
 			return new Session("", false);

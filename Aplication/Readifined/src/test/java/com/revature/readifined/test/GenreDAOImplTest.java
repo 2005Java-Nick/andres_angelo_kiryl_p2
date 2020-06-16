@@ -3,6 +3,9 @@ package com.revature.readifined.test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+import java.util.List;
+
+import org.hamcrest.core.IsInstanceOf;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -50,9 +53,19 @@ public class GenreDAOImplTest {
 		assertEquals("Genres should be the same",a.getGenre(),b.getGenre());
 	}
 	
-	// Update
+	// Get all genres
 	@Test
 	public void testD() {
+		List<Genre> list=gDAO.getAllGenres();
+		if(list.get(0) instanceof Genre)
+		{
+			assertTrue(true);
+		}
+	}
+	
+	// Update
+	@Test
+	public void testE() {
 		Genre a=gDAO.getGenre("Test", "genre");
 		a.setGenre("Test1");;
 		gDAO.updateGenre(a);
@@ -61,7 +74,7 @@ public class GenreDAOImplTest {
 	
 	// Delete
 	@Test
-	public void testE() {
+	public void testF() {
 		Genre a=gDAO.getGenre("Test1", "genre");
 		gDAO.deleteGenre(a);
 		assertTrue(true);

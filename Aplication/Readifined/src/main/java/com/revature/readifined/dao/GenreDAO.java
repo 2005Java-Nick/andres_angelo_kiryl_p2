@@ -1,5 +1,7 @@
 package com.revature.readifined.dao;
 
+import java.util.List;
+
 import com.revature.readifined.domain.Genre;
 
 public interface GenreDAO {
@@ -13,4 +15,6 @@ public interface GenreDAO {
 	public void updateGenre(Genre g);
 	
 	public void deleteGenre(Genre g);
+
+	public List<Genre> getAllGenres();
 }
