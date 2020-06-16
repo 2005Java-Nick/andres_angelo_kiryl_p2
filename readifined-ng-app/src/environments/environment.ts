@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   serviceUrl: 'http://localhost:8080/Readifined/',
-  loginEndpoint: 'login'
+  loginEndpoint: 'login',
+  authorizeEndpoint: 'authorize'
 };
 
 /*
