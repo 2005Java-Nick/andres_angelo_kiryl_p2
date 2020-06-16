@@ -1,1 +1,41 @@
-<p>registeration works!</p>
+<h2 class="register-title">New User Registration Form</h2>
+<div class="register-container align-items-center">
+    <form #registrationForm="ngForm"> <!--(ngSubmit)="onSubmit()">-->
+        <div class="form-group">
+            <input type="text" class="form-control" name="lastname" placeholder="Last Name">  <!--[(ngModel)]="TYPEWEBINDWITH">-->
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" name="firstname" placeholder="First Name"> <!--[(ngModel)]="TYPEWEBINDWITH">-->
+        </div>
+        <div class="form-group">
+            <label>Username</label>
+            <input type="username" class="form-control" name="username">  <!--[(ngModel)]="TYPEWEBINDWITH">-->
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" name="lastname">  <!--[(ngModel)]="TYPEWEBINDWITH">-->
+        </div>
+        <div class="form-group">
+            <label>Date of Birth</label>
+            <input type="date" class="form-control" name="lastname">  <!--[(ngModel)]="TYPEWEBINDWITH">-->
+        </div>
+        <div class="form-group">
+            <label>email</label>
+            <input type="email" class="form-control" name="lastname">  <!--[(ngModel)]="TYPEWEBINDWITH">-->
+        </div>
+        <div class="form-group">
+            <label>phone number</label> <!-- Type of phone number?-->
+            <input type="number" class="form-control" name="lastname">  <!--[(ngModel)]="TYPEWEBINDWITH">-->
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="isauthor"> <!--[(ngModel)]="TYPEWEBINDWITH">-->
+            <label class="form-check-label">IS AUTHOR?</label>
+        </div>
+
+        <button class="register-submit" type="submit">SUBMIT FORM</button>
+    </form>
+</div>
+
+<div class="underlay-photo"></div>
+<div class="underlay-black"></div> 
