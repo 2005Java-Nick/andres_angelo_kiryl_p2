@@ -9,6 +9,7 @@ import com.revature.readifined.dao.RoleDAOImpl;
 import com.revature.readifined.domain.Person;
 import com.revature.readifined.domain.RegisteredRole;
 import com.revature.readifined.domain.Role;
+import com.revature.readifined.domain.Session;
 
 @Service
 public class LoginServiceImpl implements LoginService{
@@ -37,24 +38,24 @@ public class LoginServiceImpl implements LoginService{
 		this.roleDAOImpl=roleDAOImpl;
 	}
 	
-	public Role login(String username, String password) {
-		Role role =null;
+	public Session login(String username, String password) {
+		Session ses =null;
 		try {
 			Person user=personDAOImpl.getPerson(username, "userName");
-			RegisteredRole rRole=null;
 			if(user!=null)
 			{
 				if(user.getUserPassword().equals(password))
 				{
-					rRole= registeredRoleDAOImpl.getRegisteredRole(user.getId(), "personId");
-					role= roleDAOImpl.getRole(rRole.getUserRolesId());
-					return role;
+					ses=new Session("session goes here",true);
+					user.setToken(ses.getToken());
+					personDAOImpl.updatePerson(user);
+					return ses;
 				}
 			}
 		}catch (Exception e) {
-			return role;
+			return new Session("", false);
 		}
-		return role;
+		return new Session("", false);
 	}
 
 }

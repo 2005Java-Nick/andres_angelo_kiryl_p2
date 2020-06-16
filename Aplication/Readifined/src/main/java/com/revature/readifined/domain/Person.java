@@ -34,6 +34,8 @@ public class Person implements Serializable{
 	private LocalDate dateOfBirth;
 	@Column(name = "phone_number")
 	private String phoneNumber;
+	@Column(name = "session_token")
+	private String token;
 	
 	public int getId() {
 		return id;
@@ -83,6 +85,12 @@ public class Person implements Serializable{
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
+	public String getToken() {
+		return token;
+	}
+	public void setToken(String token) {
+		this.token = token;
+	}
 	
 	@Override
 	public int hashCode() {
@@ -94,6 +102,7 @@ public class Person implements Serializable{
 		result = prime * result + id;
 		result = prime * result + ((lastName == null) ? 0 : lastName.hashCode());
 		result = prime * result + ((phoneNumber == null) ? 0 : phoneNumber.hashCode());
+		result = prime * result + ((token == null) ? 0 : token.hashCode());
 		result = prime * result + ((userName == null) ? 0 : userName.hashCode());
 		result = prime * result + ((userPassword == null) ? 0 : userPassword.hashCode());
 		return result;
@@ -134,6 +143,11 @@ public class Person implements Serializable{
 			if (other.phoneNumber != null)
 				return false;
 		} else if (!phoneNumber.equals(other.phoneNumber))
+			return false;
+		if (token == null) {
+			if (other.token != null)
+				return false;
+		} else if (!token.equals(other.token))
 			return false;
 		if (userName == null) {
 			if (other.userName != null)

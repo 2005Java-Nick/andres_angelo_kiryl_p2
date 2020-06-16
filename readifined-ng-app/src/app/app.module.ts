@@ -11,6 +11,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { RoleComponent } from './components/role/role.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthenticationInterceptor } from './AuthenticationInterceptor';
+import { HomeComponent } from './components/home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,8 @@ import { AuthenticationInterceptor } from './AuthenticationInterceptor';
     ForumsComponent,
     NavBarComponent,
     FooterComponent,
-    RoleComponent
+    RoleComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
