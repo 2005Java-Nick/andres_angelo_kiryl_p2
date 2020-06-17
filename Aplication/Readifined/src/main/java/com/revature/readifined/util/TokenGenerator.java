@@ -9,7 +9,7 @@ public class TokenGenerator {
 	
 	public String generateToken()
 	{
-		int seed = new Random().nextInt(99999);
+		int seed = new Random().nextInt(999999999);
 		StrongPasswordEncryptor passwordEncryptor = new StrongPasswordEncryptor();
 		String token = passwordEncryptor.encryptPassword(seed+"");
 		return token;

@@ -3,12 +3,10 @@
     <hr/>
     <h3 class="genre-label">G e n r e s</h3>
     <hr/>
-    <img (click)="select()" class="book genre"src="../../../assets/harry.jpeg">
-    
-
-    
-    
-
+    <!-- <img (click)="select()" class="book genre"src="../../../assets/harry.jpeg"> -->
+    <div  class="book genre" >
+        <div *ngFor="let g of genres" (click)="onSelect(g)" class="genre-container">{{g.genre}}</div>
+    </div>
 </div>
 <div class="underlay-photo"></div>
 <div class="underlay-black"></div> 

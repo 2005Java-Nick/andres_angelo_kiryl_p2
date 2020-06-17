@@ -79,4 +79,14 @@ public class GenreDAOImplTest {
 		gDAO.deleteGenre(a);
 		assertTrue(true);
 	}
+	
+	@Test
+	public void testG() {
+		List<Genre>list = gDAO.getAllGenres();
+		if(list!=null)
+			assertEquals("Should return Genres",true,list.get(0) instanceof Genre);
+		else
+			assertTrue(true);
+	}
+	
 }

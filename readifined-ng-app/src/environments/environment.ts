@@ -8,7 +8,7 @@ export const environment = {
   loginEndpoint: 'login',
   authorizeEndpoint: 'authorize',
 
-  getGenreEndpoint: 'genre',
+  getGenreEndpoint: 'genres',
 
   registerEndpoint: 'register'
 
