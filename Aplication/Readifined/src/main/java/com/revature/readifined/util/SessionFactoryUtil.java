@@ -47,8 +47,8 @@ public class SessionFactoryUtil {
 			System.out.println(url);
 			username = System.getenv("USERNAME_DB");
 			System.out.println(username);
-			System.out.println(password);
 			password = System.getenv("PASSWORD_DB");
+			System.out.println(password);
 			Map<String, String> settings = new HashMap<String, String>();
 			settings.put("hibernate.connection.driver_class", "org.postgresql.Driver");
 			settings.put("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");

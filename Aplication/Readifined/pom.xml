@@ -9,6 +9,10 @@
   	<maven.compiler.source>1.8</maven.compiler.source>
   	<maven.compiler.target>1.8</maven.compiler.target>
   	<spring.version>5.2.7.RELEASE</spring.version>
+  	<DB_NAME>${env.DB_NAME}</DB_NAME>
+  	<URL>${env.URL}</URL>
+  	<USERNAME_DB>${env.USERNAME_DB}</USERNAME_DB>
+  	<PASSWORD_DB>${env.PASSWORD_DB}</PASSWORD_DB>
   </properties>
   
   <dependencies>
