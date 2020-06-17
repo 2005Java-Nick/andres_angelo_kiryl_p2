@@ -47,6 +47,21 @@ public class BookGenreDAOImpl implements BookGenreDAO {
 		sess.close();
 		return list.get(0);	
 	}
+	
+	@Override
+	public List<BookGenre> getBooksGenres(int value, String column) {
+		Session sess = sf.openSession();
+		Transaction tx = sess.beginTransaction();
+		CriteriaBuilder cb = sess.getCriteriaBuilder();
+		CriteriaQuery<BookGenre> cq = cb.createQuery(BookGenre.class);
+		Root<BookGenre> rootEntry = cq.from(BookGenre.class);
+		CriteriaQuery<BookGenre> all = cq.select(rootEntry).where(cb.equal(rootEntry.get(column), value));
+		TypedQuery<BookGenre> allQuery = sess.createQuery(all);
+		List<BookGenre> list = allQuery.getResultList();
+		tx.commit();
+		sess.close();
+		return list;	
+	}
 
 	@Override
 	public void saveBookGenre(BookGenre bg) {

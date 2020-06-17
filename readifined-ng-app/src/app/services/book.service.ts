@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Book } from '../types/Book';
+import { BookList } from '../types/BookList';
 @Injectable({
   providedIn: 'root'
 })
@@ -7,14 +8,14 @@ export class BookService {
 
   constructor() { }
 
-  currentBook: Book;
+  currentBook: BookList;
 
-  setCurrentBook(book: Book): void
+  setCurrentBook(book: BookList): void
   {
     this.currentBook = book;
   }
 
-  getCurrentBook(): Book {
+  getCurrentBook(): BookList {
     return this.currentBook;
   }
 

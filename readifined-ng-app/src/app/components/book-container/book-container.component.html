@@ -1,0 +1,14 @@
+<h2 class="login-title">H o m e</h2> 
+<div class="login-container align-items-center">
+    <hr/>
+    <h3 class="genre-label">{{title}}</h3>
+    <hr/>
+    <!-- <img (click)="select()" class="book genre"src="../../../assets/harry.jpeg"> -->
+    <div  class="book genre">
+        <div *ngFor="let b of books" class="genre-container">
+            <img  (click)="onSelect(b)" title="{{b.title}}" src="{{loadImage(b)}}" alt="{{b.title}}" class="image-container">
+        </div>
+    </div>
+</div>
+<div class="underlay-photo"></div>
+<div class="underlay-black"></div> 
