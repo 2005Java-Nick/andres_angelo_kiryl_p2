@@ -1,0 +1,20 @@
+<div class="profile-container">
+<h2 class="profile-title">W e l c o m e U s e r</h2>
+    <table id="books">
+        <thead>
+            <th>Book Title</th>
+            <th>Author</th>
+            <th>$ Price $</th>
+            <th>Reviews</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let book of books">
+                <td>{{book.title}}</td>
+                <td>{{book.author}}</td>
+                <td>{{book.price}}</td>
+                <td>{{book.reviews}}</td>
+            </tr>
+        </tbody>
+    </table>   
+
+</div>
