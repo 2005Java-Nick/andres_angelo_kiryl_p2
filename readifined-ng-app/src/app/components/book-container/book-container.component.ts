@@ -27,7 +27,7 @@ export class BookContainerComponent implements OnInit {
             }
     );
   }
-
+ 
   loadImage(b: Book): string {
     if (b.coverImg.includes('null'))
     {
