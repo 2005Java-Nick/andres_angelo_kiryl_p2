@@ -65,8 +65,8 @@ public class BookGenreDAOImplTest {
 		b.setTitle("Test Book");
 		b.setPrice(9.99);
 		b.setAuthor(p.getId());
-		b.setCoverImg(text.getBytes());
-		b.setBook(text.getBytes());
+		b.setCoverImg(text);
+		b.setBook(text);
 		gDAO.saveGenre(g);
 		gDAO.saveGenre(g1);
 		bDAO.saveBook(b);
@@ -95,8 +95,8 @@ public class BookGenreDAOImplTest {
 		b.setTitle("Test Book");
 		b.setPrice(9.99);
 		b.setAuthor(p.getId());
-		b.setCoverImg(text.getBytes());
-		b.setBook(text.getBytes());
+		b.setCoverImg(text);
+		b.setBook(text);
 		g=gDAO.getGenre(g.getGenre(), "genre");
 		g1=gDAO.getGenre(g1.getGenre(),"genre");
 		b=bDAO.getBook(b.getTitle(), "title");

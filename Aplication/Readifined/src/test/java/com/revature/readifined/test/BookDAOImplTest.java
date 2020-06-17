@@ -50,8 +50,8 @@ public class BookDAOImplTest {
 		b.setTitle("Test Book");
 		b.setPrice(9.99);
 		b.setAuthor(p.getId());
-		b.setCoverImg(text.getBytes());
-		b.setBook(text.getBytes());
+		b.setCoverImg(text);
+		b.setBook(text);
 		bDAO.saveBook(b);
 		assertTrue(true);
 	}

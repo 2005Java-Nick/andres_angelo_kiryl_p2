@@ -63,8 +63,8 @@ public class BookReviewDAOImplTest {
 		b.setTitle("Test Book");
 		b.setPrice(9.99);
 		b.setAuthor(p.getId());
-		b.setCoverImg(text.getBytes());
-		b.setBook(text.getBytes());
+		b.setCoverImg(text);
+		b.setBook(text);
 		rDAO.saveReview(r);
 		rDAO.saveReview(r1);
 		bDAO.saveBook(b);
@@ -93,8 +93,8 @@ public class BookReviewDAOImplTest {
 		b.setTitle("Test Book");
 		b.setPrice(9.99);
 		b.setAuthor(p.getId());
-		b.setCoverImg(text.getBytes());
-		b.setBook(text.getBytes());
+		b.setCoverImg(text);
+		b.setBook(text);
 		r=rDAO.getReview(r.getReviewBody(), "reviewBody");
 		r1=rDAO.getReview(r1.getReviewBody(),"reviewBody");
 		b=bDAO.getBook(b.getTitle(), "title");
