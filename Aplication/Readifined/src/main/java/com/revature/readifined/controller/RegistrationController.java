@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.revature.readifined.domain.Session;
 import com.revature.readifined.services.RegisterUserServiceImpl;
 @Controller
 public class RegistrationController {
@@ -21,17 +22,20 @@ public class RegistrationController {
 	
 	@RequestMapping(path = "/register", method = RequestMethod.POST)
 	@ResponseBody
-	public boolean createUserCustomer(@RequestParam(name = "firstname",required = true)String fn,
+	public Session createUserCustomer(@RequestParam(name = "firstname",required = true)String fn,
 			@RequestParam(name = "lastname",required = true)String ln,
 			@RequestParam(name = "username",required = true)String un,
 			@RequestParam(name = "password",required = true)String pwd,
 			@RequestParam(name = "email",required = true)String email,
 			@RequestParam(name = "dob",required = true)String dob,
 			@RequestParam(name = "phone",required = true)String phone,
-			@RequestParam(name = "role",required = true)String role)
+			@RequestParam(name = "role",required = true)String roleS)
 	{
-		
-		return registeredUserServiceImpl.createUser(fn, ln, un, pwd, email, dob, phone,role);
+		boolean role=Boolean.parseBoolean(roleS);
+		if(role) {
+			return registeredUserServiceImpl.createUser(fn, ln, un, pwd, email, dob, phone, "Author");
+		}
+		return registeredUserServiceImpl.createUser(fn, ln, un, pwd, email, dob, phone, "Customer");
 	}
 	
 	
