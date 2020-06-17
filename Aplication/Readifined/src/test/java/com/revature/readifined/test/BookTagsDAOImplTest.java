@@ -66,8 +66,8 @@ public class BookTagsDAOImplTest {
 		b.setTitle("Test Book");
 		b.setPrice(9.99);
 		b.setAuthor(p.getId());
-		b.setCoverImg(text.getBytes());
-		b.setBook(text.getBytes());
+		b.setCoverImg(text);
+		b.setBook(text);
 		tDAO.saveTag(t);
 		tDAO.saveTag(t1);
 		bDAO.saveBook(b);
@@ -96,8 +96,8 @@ public class BookTagsDAOImplTest {
 		b.setTitle("Test Book");
 		b.setPrice(9.99);
 		b.setAuthor(p.getId());
-		b.setCoverImg(text.getBytes());
-		b.setBook(text.getBytes());
+		b.setCoverImg(text);
+		b.setBook(text);
 		t=tDAO.getTag(t.getTagName(), "tagName");
 		t1=tDAO.getTag(t1.getTagName(),"tagName");
 		b=bDAO.getBook(b.getTitle(), "title");
