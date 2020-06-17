@@ -12,7 +12,7 @@ export class RoleComponent implements OnInit {
   role: Role;
 
   constructor(private roleService: RoleService) {
-    setInterval(() => {this.role = this.roleService.getCurrentRole();}, 500);
+    setInterval(() => {this.role = this.roleService.getCurrentRole(); }, 500);
    }
 
   ngOnInit(): void {

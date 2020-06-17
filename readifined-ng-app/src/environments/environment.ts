@@ -6,7 +6,8 @@ export const environment = {
   production: false,
   serviceUrl: 'http://localhost:8080/Readifined/',
   loginEndpoint: 'login',
-  authorizeEndpoint: 'authorize'
+  authorizeEndpoint: 'authorize',
+  getGenreEndpoint: 'genre',
 };
 
 /*

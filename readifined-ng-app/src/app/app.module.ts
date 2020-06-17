@@ -12,6 +12,10 @@ import { RoleComponent } from './components/role/role.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthenticationInterceptor } from './AuthenticationInterceptor';
 import { HomeComponent } from './components/home/home.component';
+import { BookComponent } from './components/book/book.component';
+import { DisplayBoxComponent } from './components/display-box/display-box.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { GenreListComponent } from './components/genre-list/genre-list.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +25,11 @@ import { HomeComponent } from './components/home/home.component';
     NavBarComponent,
     FooterComponent,
     RoleComponent,
-    HomeComponent
+    HomeComponent,
+    BookComponent,
+    DisplayBoxComponent,
+    ProfileComponent,
+    GenreListComponent
   ],
   imports: [
     BrowserModule,
