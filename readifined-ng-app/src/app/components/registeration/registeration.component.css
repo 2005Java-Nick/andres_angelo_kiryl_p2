@@ -49,6 +49,11 @@ padding: .25rem;
   padding: .25rem;
   transition: 250ms background ease-in;
 }
+.form-check-label {
+  color: white;
+  display: block;
+  text-align: center;
+}
 
 
 [class*=underlay] {
