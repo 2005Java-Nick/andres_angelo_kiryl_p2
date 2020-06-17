@@ -17,4 +17,5 @@ public interface GenreDAO {
 	public void deleteGenre(Genre g);
 
 	public List<Genre> getAllGenres();
+	
 }

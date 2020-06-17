@@ -32,7 +32,7 @@ export class RegisterationComponent implements OnInit {
       this.lastname, this.username, this.password, this.email, this.dob, this.phone, this.author).subscribe(
         (role) => {this.roleService.setCurrentRole(role);
                    console.log(this.roleService.getCurrentRole());
-                   localStorage.setItem('token', this.roleService.getCurrentRole().token.replace(' ', '+'));
+                   localStorage.setItem('token', this.roleService.getCurrentRole().token);
                    if (!this.roleService.getCurrentRole().verified) {
                     this.router.navigate(['/registeration'], {replaceUrl: true});
                   }else{

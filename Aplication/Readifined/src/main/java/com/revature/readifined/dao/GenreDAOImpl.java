@@ -34,6 +34,21 @@ public class GenreDAOImpl implements GenreDAO{
 	}
 
 	@Override
+	public List<Genre> getAllGenres() {
+		Session sess = sf.openSession();
+		Transaction tx = sess.beginTransaction();
+		CriteriaBuilder cb = sess.getCriteriaBuilder();
+		CriteriaQuery<Genre> cq = cb.createQuery(Genre.class);
+		Root<Genre> rootEntry = cq.from(Genre.class);
+		CriteriaQuery<Genre> all = cq.select(rootEntry);
+		TypedQuery<Genre> allQuery = sess.createQuery(all);
+		List<Genre>list=allQuery.getResultList();
+		tx.commit();
+		sess.close();
+		return list;
+	}
+	
+	@Override
 	public Genre getGenre(String value, String column) {
 		Session sess = sf.openSession();
 		Transaction tx = sess.beginTransaction();
@@ -48,20 +63,6 @@ public class GenreDAOImpl implements GenreDAO{
 		return list.get(0);
 	}
 	
-	@Override
-	public List<Genre> getAllGenres() {
-		Session sess = sf.openSession();
-		Transaction tx = sess.beginTransaction();
-		CriteriaBuilder cb = sess.getCriteriaBuilder();
-		CriteriaQuery<Genre> cq = cb.createQuery(Genre.class);
-		Root<Genre> rootEntry = cq.from(Genre.class);
-		CriteriaQuery<Genre> all = cq.select(rootEntry);
-		TypedQuery<Genre> allQuery = sess.createQuery(all);
-		List<Genre>list=allQuery.getResultList();
-		tx.commit();
-		sess.close();
-		return list;
-	}
 
 	@Override
 	public void saveGenre(Genre g) {
