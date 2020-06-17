@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { BookList } from '../../types/BookList';
+import { Book } from '../../types/Book';
 import { BookService } from '../../services/book.service';
-import { GetBooksService } from 'src/app/services/get-books.service';
 
 @Component({
   selector: 'app-book',
@@ -10,7 +9,7 @@ import { GetBooksService } from 'src/app/services/get-books.service';
 })
 export class BookComponent implements OnInit {
 
-  book: BookList;
+  book: Book;
 
   constructor(private bookService: BookService) {
     setInterval(() => {this.book = this.bookService.getCurrentBook(); }, 500);

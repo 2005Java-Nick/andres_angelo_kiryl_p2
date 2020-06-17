@@ -7,8 +7,9 @@ export const environment = {
   serviceUrl: 'http://localhost:8080/Readifined/',
   loginEndpoint: 'login',
   authorizeEndpoint: 'authorize',
-  getBooksEndpoint: 'books',
+
   getGenreEndpoint: 'genres',
+
   registerEndpoint: 'register'
 
 };

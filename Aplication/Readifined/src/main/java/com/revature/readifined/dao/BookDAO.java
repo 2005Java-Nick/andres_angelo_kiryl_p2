@@ -1,7 +1,5 @@
 package com.revature.readifined.dao;
 
-import java.util.List;
-
 import com.revature.readifined.domain.Book;
 
 public interface BookDAO {
@@ -15,7 +13,5 @@ public interface BookDAO {
 	public void updateBook(Book b);
 	
 	public void deleteBook(Book b);
-	
-	public List<Book> getAllBooks();
 
 }

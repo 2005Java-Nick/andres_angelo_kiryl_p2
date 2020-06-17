@@ -4,7 +4,6 @@ import { GenreListService } from '../../services/genre-list.service';
 import { GenreService } from 'src/app/services/genre.service';
 import { Genre } from 'src/app/types/Genre';
 import { GenreList } from 'src/app/types/GenreList';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -15,7 +14,7 @@ export class HomeComponent implements OnInit {
   @Input()
   genres: GenreList;
 
-  constructor(private gls: GenreListService, private gs: GenreService, private router: Router) { }
+  constructor(private gls: GenreListService, private gs: GenreService) { }
 
   ngOnInit(): void {
     this.gs.getGenre().subscribe(
@@ -25,9 +24,13 @@ export class HomeComponent implements OnInit {
     );
   }
 
+  select(){
+    console.log('Selected book');
+  }
+
   onSelect(g: Genre) {
     localStorage.setItem('selected-genre', g.genre);
-    this.router.navigate(['/book']);
+    //go to book page
     console.log(g.genre);
   }
 }

@@ -27,9 +27,9 @@ public class Book implements Serializable{
 	@Column(name = "author")
 	private int author;
 	@Column(name = "cover_img")
-	private String coverImg;
+	private byte [] coverImg;
 	@Column(name = "book")
-	private String book;
+	private byte [] book;
 	
 	
 	public int getId() {
@@ -56,16 +56,16 @@ public class Book implements Serializable{
 	public void setAuthor(int author) {
 		this.author = author;
 	}
-	public String getCoverImg() {
+	public byte[] getCoverImg() {
 		return coverImg;
 	}
-	public void setCoverImg(String coverImg) {
+	public void setCoverImg(byte[] coverImg) {
 		this.coverImg = coverImg;
 	}
-	public String getBook() {
+	public byte[] getBook() {
 		return book;
 	}
-	public void setBook(String book) {
+	public void setBook(byte[] book) {
 		this.book = book;
 	}
 	@Override
@@ -73,8 +73,8 @@ public class Book implements Serializable{
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + author;
-		result = prime * result + ((book == null) ? 0 : book.hashCode());
-		result = prime * result + ((coverImg == null) ? 0 : coverImg.hashCode());
+		result = prime * result + Arrays.hashCode(book);
+		result = prime * result + Arrays.hashCode(coverImg);
 		result = prime * result + id;
 		long temp;
 		temp = Double.doubleToLongBits(price);
@@ -94,15 +94,9 @@ public class Book implements Serializable{
 		Book other = (Book) obj;
 		if (author != other.author)
 			return false;
-		if (book == null) {
-			if (other.book != null)
-				return false;
-		} else if (!book.equals(other.book))
+		if (!Arrays.equals(book, other.book))
 			return false;
-		if (coverImg == null) {
-			if (other.coverImg != null)
-				return false;
-		} else if (!coverImg.equals(other.coverImg))
+		if (!Arrays.equals(coverImg, other.coverImg))
 			return false;
 		if (id != other.id)
 			return false;

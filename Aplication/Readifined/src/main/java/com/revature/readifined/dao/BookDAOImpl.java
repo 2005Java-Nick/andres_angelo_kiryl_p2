@@ -15,7 +15,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.revature.readifined.domain.Book;
-import com.revature.readifined.domain.Genre;
 @Component
 public class BookDAOImpl implements BookDAO {
 	
@@ -60,21 +59,6 @@ public class BookDAOImpl implements BookDAO {
 		tx.commit();
 		sess.close();
 		return list.get(0);
-	}
-	
-	@Override
-	public List<Book> getAllBooks() {
-		Session sess = sf.openSession();
-		Transaction tx = sess.beginTransaction();
-		CriteriaBuilder cb = sess.getCriteriaBuilder();
-		CriteriaQuery<Book> cq = cb.createQuery(Book.class);
-		Root<Book> rootEntry = cq.from(Book.class);
-		CriteriaQuery<Book> all = cq.select(rootEntry);
-		TypedQuery<Book> allQuery = sess.createQuery(all);
-		List<Book>list=allQuery.getResultList();
-		tx.commit();
-		sess.close();
-		return list;
 	}
 
 	public void saveBook(Book b) {
