@@ -7,11 +7,11 @@ create table readifined.person(
 	first_name varchar(100),
 	last_name varchar(100),
 	user_name varchar(50) not null unique,
-	user_password varchar(50) not null,
+	user_password varchar(1000) not null,
 	email varchar(100) not null unique,
 	date_of_birth date,
 	phone_number varchar(20),
-	session_token varchar(50),
+	session_token varchar(1000),
 	constraint person_id_pk primary key (id)
 );
 

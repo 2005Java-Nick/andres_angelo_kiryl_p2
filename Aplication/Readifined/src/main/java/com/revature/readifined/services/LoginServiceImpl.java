@@ -10,6 +10,7 @@ import com.revature.readifined.domain.Person;
 import com.revature.readifined.domain.RegisteredRole;
 import com.revature.readifined.domain.Role;
 import com.revature.readifined.domain.Session;
+import com.revature.readifined.util.TokenGenerator;
 
 @Service
 public class LoginServiceImpl implements LoginService{
@@ -19,6 +20,8 @@ public class LoginServiceImpl implements LoginService{
 	RegisteredRoleDAOImpl registeredRoleDAOImpl;
 	
 	RoleDAOImpl roleDAOImpl;
+	
+	TokenGenerator tokenGenerator;
 	
 	@Autowired
 	public void setPersonDAO(PersonDAOImpl personDaoImpl)
@@ -38,15 +41,21 @@ public class LoginServiceImpl implements LoginService{
 		this.roleDAOImpl=roleDAOImpl;
 	}
 	
+	@Autowired
+	public void setTokenGenerator(TokenGenerator tokenGenerator)
+	{
+		this.tokenGenerator=tokenGenerator;
+	}
+	
 	public Session login(String username, String password) {
 		Session ses =null;
 		try {
 			Person user=personDAOImpl.getPerson(username, "userName");
 			if(user!=null)
 			{
-				if(user.getUserPassword().equals(password))
+				if(tokenGenerator.validatePassword(password,user.getUserPassword()))
 				{
-					ses=new Session("sessiongoeshere",true);
+					ses=new Session(tokenGenerator.generateToken(),true);
 					user.setToken(ses.getToken());
 					personDAOImpl.updatePerson(user);
 					return ses;
