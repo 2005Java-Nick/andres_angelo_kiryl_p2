@@ -43,7 +43,7 @@ public class SessionFactoryUtil {
 		
 		if (sf == null) {
 			url = System.getenv("URL");
-			url = "jdbc:postgresql://" + url + ":5432/" + DB_NAME + "?";
+			url = "jdbc:postgresql://" + url + ":5432/" + DB_NAME;
 			System.out.println(url);
 			username = System.getenv("USERNAME_DB");
 			System.out.println(username);
