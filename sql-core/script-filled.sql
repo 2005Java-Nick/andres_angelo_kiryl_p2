@@ -21,8 +21,8 @@ create table readifined.book(
 	title varchar(100) not null,
 	price numeric(7,2),
 	author integer not null, 
-	cover_img bytea,
-	book bytea,
+	cover_img varchar(200),
+	book varchar(200),
 	constraint book_id_pk primary key (id),
 	constraint book_author_fk foreign key (author) references readifined.person(id) on delete cascade on update cascade
 );

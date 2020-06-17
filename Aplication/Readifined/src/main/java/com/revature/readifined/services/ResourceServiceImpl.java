@@ -1,5 +1,6 @@
 package com.revature.readifined.services;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,8 @@ import org.springframework.stereotype.Service;
 import com.revature.readifined.dao.BookDAOImpl;
 import com.revature.readifined.dao.BookGenreDAOImpl;
 import com.revature.readifined.dao.GenreDAOImpl;
+import com.revature.readifined.domain.Book;
+import com.revature.readifined.domain.BookGenre;
 import com.revature.readifined.domain.Genre;
 
 
@@ -16,7 +19,7 @@ public class ResourceServiceImpl implements ResourceService {
 
 	BookGenreDAOImpl bookGenreDAOImpl;
 	GenreDAOImpl genreDAOImpl;
-	BookDAOImpl booKDAOImpl;	
+	BookDAOImpl bookDAOImpl;	
 	
 	@Autowired
 	public void setBookGenreDAOImpl(BookGenreDAOImpl bookGenreDAOImpl) {
@@ -27,8 +30,8 @@ public class ResourceServiceImpl implements ResourceService {
 		this.genreDAOImpl = genreDAOImpl;
 	}
 	@Autowired
-	public void setBooKDAOImpl(BookDAOImpl booKDAOImpl) {
-		this.booKDAOImpl = booKDAOImpl;
+	public void setBookDAOImpl(BookDAOImpl booKDAOImpl) {
+		this.bookDAOImpl = booKDAOImpl;
 	}
 
 	@Override
@@ -43,9 +46,19 @@ public class ResourceServiceImpl implements ResourceService {
 	}
 
 	@Override
-	public void getAllBooks() {
-		// TODO Auto-generated method stub
-		
+	public List<Book> getAllBooks() {
+		return bookDAOImpl.getAllBooks();
 	}
 
+	@Override
+	public List<Book> getAllBooksbyGenre(String genre) {
+		Genre g = genreDAOImpl.getGenre(genre, "genre");
+		List<BookGenre> bgs = bookGenreDAOImpl.getBooksGenres(g.getId(), "genreId");
+		List<Book> books = new ArrayList<Book>();
+		for(BookGenre bg : bgs)
+		{
+			books.add(bookDAOImpl.getBook(bg.getBookId()));
+		}
+		return books;
+	}
 }
