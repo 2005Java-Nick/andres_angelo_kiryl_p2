@@ -29,6 +29,7 @@ public class LoginController {
 	public Session getlogin(@RequestParam(name = "session", required = false) String sess,@RequestParam(name = "username", required = true) String username,@RequestParam(name = "password", required = true) String password) {
 		if (sess==null)
 		{
+			password=password.replace(" ", "+");
 			System.out.println("Does not have session");
 			return loginService.login(username, password);
 		}

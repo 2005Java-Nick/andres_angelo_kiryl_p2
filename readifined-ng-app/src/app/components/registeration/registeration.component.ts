@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { RegistrationService } from '../../services/registration.service';
+import { RoleService } from 'src/app/services/role.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registeration',
@@ -7,7 +10,37 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterationComponent implements OnInit {
 
-  constructor() { }
+  lastname: string;
+  firstname: string;
+  username: string;
+  password: string;
+  email: string;
+  dob: Date;
+  phone: number;
+  author: boolean;
+
+  constructor(private registrationService: RegistrationService, private roleService: RoleService, private router: Router) { }
+
+  toggleAuthor(){
+    this.author = !this.author;
+    console.log(this.author);
+  }
+
+  register()
+  {
+    this.registrationService.register(this.firstname,
+      this.lastname, this.username, this.password, this.email, this.dob, this.phone, this.author).subscribe(
+        (role) => {this.roleService.setCurrentRole(role);
+                   console.log(this.roleService.getCurrentRole());
+                   localStorage.setItem('token', this.roleService.getCurrentRole().token.replace(' ', '+'));
+                   if (!this.roleService.getCurrentRole().verified) {
+                    this.router.navigate(['/registeration'], {replaceUrl: true});
+                  }else{
+                    this.router.navigate(['/home'], {replaceUrl: true});
+                  }
+              }
+      );
+  }
 
   ngOnInit(): void {
   }

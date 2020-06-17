@@ -30,6 +30,7 @@ export class LoginComponent implements OnInit {
   constructor(private authenticationService: AuthenticationService, private roleService: RoleService, private router: Router) { }
 
   ngOnInit(): void {
+    localStorage.clear();
   }
 
 }
