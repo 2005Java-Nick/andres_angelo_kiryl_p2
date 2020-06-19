@@ -5,5 +5,7 @@ export const environment = {
   authorizeEndpoint: 'authorize',
   getBooksEndpoint: 'books',
   getGenreEndpoint: 'genres',
-  registerEndpoint: 'register'
+  registerEndpoint: 'register',
+  submitReviewEndpoint: 'submitReview',
+  getCommentsEndpoint: 'reviews'
 };

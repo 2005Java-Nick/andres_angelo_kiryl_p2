@@ -21,6 +21,7 @@ com\revature\readifined\controller\LoginController.class
 com\revature\readifined\dao\TagDAO.class
 com\revature\readifined\controller\ResourceController.class
 com\revature\readifined\dao\ReviewDAOImpl.class
+com\revature\readifined\domain\Comment.class
 com\revature\readifined\dao\RegisteredAddressDAOImpl.class
 com\revature\readifined\services\RegisterUserService.class
 com\revature\readifined\services\AuthorizationServiceImpl.class

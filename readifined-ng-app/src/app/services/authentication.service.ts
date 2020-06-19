@@ -12,7 +12,6 @@ export class AuthenticationService {
 
   authenticate(username, password)
   {
-    localStorage.setItem('username', username);
     return this.http.post<Role>
     (
       this.LOGIN_URL,

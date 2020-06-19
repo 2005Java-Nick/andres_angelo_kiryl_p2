@@ -20,6 +20,7 @@ import { BookContainerComponent } from './components/book-container/book-contain
 import { ReviewContainerComponent } from './components/review-container/review-container.component';
 import { CommentComponent } from './components/comment/comment.component';
 import { ReversePipe } from './pipes/reverse.pipe';
+import {APP_BASE_HREF} from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,6 +48,9 @@ import { ReversePipe } from './pipes/reverse.pipe';
   ],
   providers:
   [{
+    provide: APP_BASE_HREF,
+    useValue: window['/angular/']
+  }, {
     provide: HTTP_INTERCEPTORS,
     useClass: AuthenticationInterceptor,
     multi: true
