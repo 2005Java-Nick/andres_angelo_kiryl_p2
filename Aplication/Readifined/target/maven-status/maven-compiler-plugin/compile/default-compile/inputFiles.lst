@@ -4,6 +4,7 @@ C:\Users\amtam\OneDrive\Documentos\GitHub\andres_angelo_kiryl_p2\Aplication\Read
 C:\Users\amtam\OneDrive\Documentos\GitHub\andres_angelo_kiryl_p2\Aplication\Readifined\src\main\java\com\revature\readifined\dao\AddressTypeDAO.java
 C:\Users\amtam\OneDrive\Documentos\GitHub\andres_angelo_kiryl_p2\Aplication\Readifined\src\main\java\com\revature\readifined\domain\Session.java
 C:\Users\amtam\OneDrive\Documentos\GitHub\andres_angelo_kiryl_p2\Aplication\Readifined\src\main\java\com\revature\readifined\dao\PermissionsDAOImpl.java
+C:\Users\amtam\OneDrive\Documentos\GitHub\andres_angelo_kiryl_p2\Aplication\Readifined\src\main\java\com\revature\readifined\services\ReviewServiceImpl.java
 C:\Users\amtam\OneDrive\Documentos\GitHub\andres_angelo_kiryl_p2\Aplication\Readifined\src\main\java\com\revature\readifined\domain\BookTags.java
 C:\Users\amtam\OneDrive\Documentos\GitHub\andres_angelo_kiryl_p2\Aplication\Readifined\src\main\java\com\revature\readifined\domain\Permissions.java
 C:\Users\amtam\OneDrive\Documentos\GitHub\andres_angelo_kiryl_p2\Aplication\Readifined\src\main\java\com\revature\readifined\domain\AssignedPermissions.java
@@ -13,10 +14,12 @@ C:\Users\amtam\OneDrive\Documentos\GitHub\andres_angelo_kiryl_p2\Aplication\Read
 C:\Users\amtam\OneDrive\Documentos\GitHub\andres_angelo_kiryl_p2\Aplication\Readifined\src\main\java\com\revature\readifined\domain\BookGenre.java
 C:\Users\amtam\OneDrive\Documentos\GitHub\andres_angelo_kiryl_p2\Aplication\Readifined\src\main\java\com\revature\readifined\domain\AddressType.java
 C:\Users\amtam\OneDrive\Documentos\GitHub\andres_angelo_kiryl_p2\Aplication\Readifined\src\main\java\com\revature\readifined\dao\ReviewDAO.java
+C:\Users\amtam\OneDrive\Documentos\GitHub\andres_angelo_kiryl_p2\Aplication\Readifined\src\main\java\com\revature\readifined\config\ApplicationFilter.java
 C:\Users\amtam\OneDrive\Documentos\GitHub\andres_angelo_kiryl_p2\Aplication\Readifined\src\main\java\com\revature\readifined\util\TokenGenerator.java
 C:\Users\amtam\OneDrive\Documentos\GitHub\andres_angelo_kiryl_p2\Aplication\Readifined\src\main\java\com\revature\readifined\dao\BookReviewDAOImpl.java
 C:\Users\amtam\OneDrive\Documentos\GitHub\andres_angelo_kiryl_p2\Aplication\Readifined\src\main\java\com\revature\readifined\domain\Role.java
 C:\Users\amtam\OneDrive\Documentos\GitHub\andres_angelo_kiryl_p2\Aplication\Readifined\src\main\java\com\revature\readifined\dao\BookGenreDAO.java
+C:\Users\amtam\OneDrive\Documentos\GitHub\andres_angelo_kiryl_p2\Aplication\Readifined\src\main\java\com\revature\readifined\controller\ReviewController.java
 C:\Users\amtam\OneDrive\Documentos\GitHub\andres_angelo_kiryl_p2\Aplication\Readifined\src\main\java\com\revature\readifined\domain\Address.java
 C:\Users\amtam\OneDrive\Documentos\GitHub\andres_angelo_kiryl_p2\Aplication\Readifined\src\main\java\com\revature\readifined\config\DispatcherConfig.java
 C:\Users\amtam\OneDrive\Documentos\GitHub\andres_angelo_kiryl_p2\Aplication\Readifined\src\main\java\com\revature\readifined\domain\Book.java
@@ -48,6 +51,7 @@ C:\Users\amtam\OneDrive\Documentos\GitHub\andres_angelo_kiryl_p2\Aplication\Read
 C:\Users\amtam\OneDrive\Documentos\GitHub\andres_angelo_kiryl_p2\Aplication\Readifined\src\main\java\com\revature\readifined\dao\AssignedPermissionsDAOImpl.java
 C:\Users\amtam\OneDrive\Documentos\GitHub\andres_angelo_kiryl_p2\Aplication\Readifined\src\main\java\com\revature\readifined\controller\RegistrationController.java
 C:\Users\amtam\OneDrive\Documentos\GitHub\andres_angelo_kiryl_p2\Aplication\Readifined\src\main\java\com\revature\readifined\services\ResourceService.java
+C:\Users\amtam\OneDrive\Documentos\GitHub\andres_angelo_kiryl_p2\Aplication\Readifined\src\main\java\com\revature\readifined\services\ReviewService.java
 C:\Users\amtam\OneDrive\Documentos\GitHub\andres_angelo_kiryl_p2\Aplication\Readifined\src\main\java\com\revature\readifined\dao\AddressTypeDAOImpl.java
 C:\Users\amtam\OneDrive\Documentos\GitHub\andres_angelo_kiryl_p2\Aplication\Readifined\src\main\java\com\revature\readifined\dao\ReviewDAOImpl.java
 C:\Users\amtam\OneDrive\Documentos\GitHub\andres_angelo_kiryl_p2\Aplication\Readifined\src\main\java\com\revature\readifined\dao\RegisteredRoleDAOImpl.java

@@ -13,7 +13,9 @@ com\revature\readifined\domain\Permissions.class
 com\revature\readifined\dao\RegisteredAddressDAO.class
 com\revature\readifined\dao\BookGenreDAOImpl.class
 com\revature\readifined\dao\RoleDAO.class
+com\revature\readifined\services\ReviewService.class
 com\revature\readifined\controller\AuthorizationController.class
+com\revature\readifined\config\ApplicationFilter.class
 com\revature\readifined\controller\RegistrationController.class
 com\revature\readifined\controller\LoginController.class
 com\revature\readifined\dao\TagDAO.class
@@ -26,6 +28,7 @@ com\revature\readifined\config\DispatcherConfig.class
 com\revature\readifined\services\AuthorizationService.class
 com\revature\readifined\services\LoginService.class
 com\revature\readifined\dao\RegisteredRoleDAO.class
+com\revature\readifined\controller\ReviewController.class
 com\revature\readifined\dao\PermissionsDAOImpl.class
 com\revature\readifined\services\LoginServiceImpl.class
 com\revature\readifined\util\SessionFactoryUtil.class
@@ -44,6 +47,7 @@ com\revature\readifined\dao\ReviewDAO.class
 com\revature\readifined\dao\TagDAOImpl.class
 com\revature\readifined\domain\BookReviews.class
 com\revature\readifined\domain\Tag.class
+com\revature\readifined\services\ReviewServiceImpl.class
 com\revature\readifined\dao\AssignedPermissionsDAOImpl.class
 com\revature\readifined\dao\BookTagsDAO.class
 com\revature\readifined\dao\GenreDAO.class

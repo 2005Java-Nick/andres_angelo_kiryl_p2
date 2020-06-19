@@ -1,7 +1,9 @@
 package com.revature.readifined.config;
 
+import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
+@Configuration
 public class DispatcherConfig extends AbstractAnnotationConfigDispatcherServletInitializer{
 
 	@Override
@@ -20,7 +22,5 @@ public class DispatcherConfig extends AbstractAnnotationConfigDispatcherServletI
 		// TODO Auto-generated method stub
 		return new String[] { "/" };
 	}
-	
-	
 
 }

@@ -1,0 +1,23 @@
+<div class="login-container align-items-center">
+    <h3 class="genre-label">{{title}}</h3>
+    <hr/>
+    <!-- <img (click)="select()" class="book genre"src="../../../assets/harry.jpeg"> -->
+    <div  class="book-info" >
+        <img  title="{{title}}" src="{{loadImage()}}" alt="{{title}}" class="image-container">
+        <ul class="info">
+            <li>{{title}}</li>
+            <li>{{author}}</li>
+            <li>${{price}}</li> 
+                                  
+        </ul>
+        <!--<div *ngFor="let g of genres" (click)="onSelect(g)" class="genre-container">{{g.genre}}</div>-->
+    </div>
+
+    <div class="book-comment" *ngIf="signedIn==true">
+        <div> R A T I N G</div>
+        <textarea  #review id="review" cols="50">asdf</textarea><br>
+        <button (click)="submitReview(review.value)">Submit</button>
+    </div>
+</div>
+<div class="underlay-photo"></div>
+<div class="underlay-black"></div> 

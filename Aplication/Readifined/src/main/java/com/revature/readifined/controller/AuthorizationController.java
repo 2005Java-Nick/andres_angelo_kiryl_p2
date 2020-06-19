@@ -2,6 +2,7 @@ package com.revature.readifined.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -20,7 +21,6 @@ private AuthorizationService authorizationService;
 	{
 		this.authorizationService=authorizationService;
 	}
-	
 	@RequestMapping(path = "/authorize", method = RequestMethod.POST)
 	@ResponseBody
 	public Session getlogin(@RequestParam(name = "session", required = false) String sess,@RequestParam(name = "username", required = true) String username) {

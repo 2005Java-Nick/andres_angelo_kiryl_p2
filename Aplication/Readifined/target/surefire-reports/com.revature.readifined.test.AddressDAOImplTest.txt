@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.revature.readifined.test.AddressDAOImplTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.403 sec
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.831 sec
