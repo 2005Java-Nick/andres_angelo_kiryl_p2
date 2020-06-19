@@ -18,8 +18,7 @@ export class NavBarComponent implements OnInit {
 
   logOut()
   {
-    localStorage.setItem('token', '');
-    localStorage.setItem('username', '');
+    localStorage.clear();
   }
 
   authorize()

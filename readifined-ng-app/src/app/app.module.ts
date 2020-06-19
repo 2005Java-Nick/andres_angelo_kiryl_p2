@@ -18,6 +18,8 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { GenreListComponent } from './components/genre-list/genre-list.component';
 import { BookContainerComponent } from './components/book-container/book-container.component';
 import { ReviewContainerComponent } from './components/review-container/review-container.component';
+import { CommentComponent } from './components/comment/comment.component';
+import { ReversePipe } from './pipes/reverse.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +35,9 @@ import { ReviewContainerComponent } from './components/review-container/review-c
     ProfileComponent,
     GenreListComponent,
     BookContainerComponent,
-    ReviewContainerComponent
+    ReviewContainerComponent,
+    CommentComponent,
+    ReversePipe
   ],
   imports: [
     BrowserModule,

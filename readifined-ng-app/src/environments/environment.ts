@@ -10,7 +10,8 @@ export const environment = {
   getBooksEndpoint: 'books',
   getGenreEndpoint: 'genres',
   registerEndpoint: 'register',
-  submitReviewEndpoint: 'submitReview'
+  submitReviewEndpoint: 'submitReview',
+  getCommentsEndpoint: 'reviews'
 
 };
 
