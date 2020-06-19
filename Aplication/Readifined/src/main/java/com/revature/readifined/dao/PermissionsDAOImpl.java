@@ -12,9 +12,10 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import com.revature.readifined.domain.Permissions;
-@Component
+@Repository
 public class PermissionsDAOImpl implements PermissionsDAO{
 
     private SessionFactory sf;

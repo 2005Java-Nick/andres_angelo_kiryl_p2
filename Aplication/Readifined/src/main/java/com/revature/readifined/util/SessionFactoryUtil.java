@@ -21,7 +21,7 @@ public class SessionFactoryUtil {
 
 	private static String password;
 
-	private static final String DB_NAME = System.getenv("DB_NAME");
+	private static final String DB_NAME = "postgres";
 
 	public SessionFactory getSessionFactory() {
 		return this.sf;
@@ -42,13 +42,10 @@ public class SessionFactoryUtil {
 
 		
 		if (sf == null) {
-			url = System.getenv("URL");
+			url = "readifined.czdzryggenuf.us-east-2.rds.amazonaws.com";
 			url = "jdbc:postgresql://" + url + ":5432/" + DB_NAME+"?";
-			System.out.println(url);
-			username = System.getenv("USERNAME_DB");
-			System.out.println(username);
-			password = System.getenv("PASSWORD_DB");
-			System.out.println(password);
+			username = "postgres";
+			password = "tomcats_2020";
 			Map<String, String> settings = new HashMap<String, String>();
 			settings.put("hibernate.connection.driver_class", "org.postgresql.Driver");
 			settings.put("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");

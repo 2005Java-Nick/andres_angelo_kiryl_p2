@@ -16,7 +16,8 @@ import com.revature.readifined.services.ResourceServiceImpl;
 
 @Controller
 public class ResourceController {
-private ResourceServiceImpl resourceServiceImpl;
+	
+	private ResourceServiceImpl resourceServiceImpl;
 	
 	@Autowired
 	public void setLoginService (ResourceServiceImpl resourceServiceImpl)
