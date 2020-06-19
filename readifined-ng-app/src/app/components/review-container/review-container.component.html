@@ -10,12 +10,6 @@
         </ul>
     </div>
 
-<<<<<<< Updated upstream
-    <div class="book-comment" *ngIf="signedIn==true">
-        <div> R A T I N G</div>
-        <textarea  #review id="review" cols="50">asdf</textarea><br>
-        <button (click)="submitReview(review.value)">Submit</button>
-=======
     <div class="book-comment" >
         <div *ngIf="!isHidden" class="router-link">
             <h3><a (click)="reRoute('/login')">Sign in to comment</a></h3>
@@ -32,8 +26,8 @@
                 <p *ngFor="let c of commentsList | reverse" cols="50" rows="10" class="comment-paragraph">{{c.username}}: {{c.text}}</p>
             </div>      
         </div>
->>>>>>> Stashed changes
     </div>
+    
 </div>
 <div class="underlay-photo"></div>
 <div class="underlay-black"></div> 

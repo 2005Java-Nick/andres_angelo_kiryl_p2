@@ -31,7 +31,9 @@ body {
 
 .login-container
 {
-    align-items: center;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    
 }
 
 input {
@@ -153,9 +155,7 @@ padding: .25rem;
 
 }
  .book-comment {
-<<<<<<< Updated upstream
      float:right;
-=======
      /* float:right; */
      
 }
@@ -187,7 +187,6 @@ padding: .25rem;
 .label-chat
 {
   color: white;
->>>>>>> Stashed changes
 }
 
 .router-link{
