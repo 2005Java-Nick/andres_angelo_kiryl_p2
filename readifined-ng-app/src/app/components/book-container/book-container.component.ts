@@ -27,7 +27,6 @@ export class BookContainerComponent implements OnInit {
             }
     );
   }
-
   loadImage(b: Book): string {
     if (b.coverImg.includes('null'))
     {
@@ -39,10 +38,16 @@ export class BookContainerComponent implements OnInit {
   }
 
   onSelect(b: Book) {
-    localStorage.setItem('selected-genre', b.title);
+    localStorage.setItem('bookid', b.id.toString());
+    localStorage.setItem('book', b.title);
+    localStorage.setItem('price', b.price.toString());
+    localStorage.setItem('coverimg', b.coverImg);
+    localStorage.setItem('author', b.author.toString());
     console.log(b.id);
     console.log(b.title);
     console.log(b.price);
     console.log(b.coverImg);
+    console.log(b.author);
+    this.router.navigate(['/bookreview']);
   }
 }

@@ -17,6 +17,7 @@ import { DisplayBoxComponent } from './components/display-box/display-box.compon
 import { ProfileComponent } from './components/profile/profile.component';
 import { GenreListComponent } from './components/genre-list/genre-list.component';
 import { BookContainerComponent } from './components/book-container/book-container.component';
+import { ReviewContainerComponent } from './components/review-container/review-container.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,8 @@ import { BookContainerComponent } from './components/book-container/book-contain
     DisplayBoxComponent,
     ProfileComponent,
     GenreListComponent,
-    BookContainerComponent
+    BookContainerComponent,
+    ReviewContainerComponent
   ],
   imports: [
     BrowserModule,

@@ -8,6 +8,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { RegisterationComponent } from './components/registeration/registeration.component';
 import { BookComponent } from './components/book/book.component';
 import { BookContainerComponent } from './components/book-container/book-container.component';
+import { ReviewContainerComponent } from './components/review-container/review-container.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent },
   { path: 'registeration', component: RegisterationComponent},
   { path: 'book', component: BookContainerComponent},
+  { path: 'bookreview', component: ReviewContainerComponent},
   { path: '', redirectTo: '/login', pathMatch: 'full'}
 ];
 

@@ -5,15 +5,20 @@ export class AuthenticationInterceptor implements HttpInterceptor {
 
     intercept(request, next) {
         const token = localStorage.getItem('token');
-        if (!token)
+        console.log(request);
+        const newRequest = request.clone({withCredentials: false});
+        console.log(newRequest);
+        console.log(token);
+        if (token === null || !token)
         {
-            console.log(request.body);
-            return next.handle(request);
+            console.log(newRequest);
+            return next.handle(newRequest);
         }else
         {
-            const newRequest = request.clone({body: request.body + '&session=' + token});
             console.log(newRequest.body);
-            return next.handle(newRequest);
+            const newRequest1 = request.clone({body: newRequest.body + '&session=' + token});
+            console.log(newRequest1.body);
+            return next.handle(newRequest1);
         }
     }
 }
