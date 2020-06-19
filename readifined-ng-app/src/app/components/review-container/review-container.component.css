@@ -31,7 +31,9 @@ body {
 
 .login-container
 {
-    align-items: center;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    
 }
 
 input {
@@ -153,5 +155,27 @@ padding: .25rem;
 
 }
  .book-comment {
-     float:right;
+     /* float:right; */
+     
+}
+#review {
+  border: ridge 3px grey;
+  border-radius: 5px;
+}
+#chat {
+  border: ridge 3px grey;
+  border-radius: 5px;
+}
+#review-btn {
+  border-radius:3px;
+}
+#review-btn:hover {
+  border-radius:3px;
+  border-color: yellow;
+  color: rgb(126, 126, 126);
+  background-color: rgb(207, 207, 207);
+}
+
+#chat-box {
+  color: white;
 }
