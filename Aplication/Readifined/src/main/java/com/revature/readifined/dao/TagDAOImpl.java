@@ -12,10 +12,11 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import com.revature.readifined.domain.Tag;
 
-@Component
+@Repository
 public class TagDAOImpl implements TagDAO{
 
     private SessionFactory sf;

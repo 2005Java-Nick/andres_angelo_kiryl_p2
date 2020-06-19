@@ -12,9 +12,10 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import com.revature.readifined.domain.RegisteredRole;
+import org.springframework.stereotype.Repository;
 
-@Component
+import com.revature.readifined.domain.RegisteredRole;
+@Repository
 public class RegisteredRoleDAOImpl implements RegisteredRoleDAO{
  
 	private SessionFactory sf;

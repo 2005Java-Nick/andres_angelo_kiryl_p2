@@ -12,10 +12,11 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import com.revature.readifined.domain.BookTags;
 import com.revature.readifined.domain.Genre;
-@Component
+@Repository
 public class GenreDAOImpl implements GenreDAO{
 
     private SessionFactory sf;

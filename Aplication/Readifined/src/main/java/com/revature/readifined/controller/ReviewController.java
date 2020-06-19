@@ -7,8 +7,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.revature.readifined.domain.Session;
-import com.revature.readifined.services.AuthorizationService;
 import com.revature.readifined.services.ReviewServiceImpl;
 
 @Controller

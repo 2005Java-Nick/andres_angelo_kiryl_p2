@@ -12,10 +12,11 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import com.revature.readifined.domain.Address;
 import com.revature.readifined.domain.RegisteredAddress;
-@Component
+@Repository
 public class RegisteredAddressDAOImpl implements RegisteredAddressDAO {
 
     private SessionFactory sf;
