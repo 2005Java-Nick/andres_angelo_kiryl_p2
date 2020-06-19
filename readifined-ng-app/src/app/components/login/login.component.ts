@@ -20,8 +20,11 @@ export class LoginComponent implements OnInit {
       (role) => {this.roleService.setCurrentRole(role);
                  console.log(this.roleService.getCurrentRole());
                  localStorage.setItem('token', this.roleService.getCurrentRole().token);
-                 if (this.roleService.getCurrentRole().verified) {
+                 if (this.roleService.getCurrentRole().verified && localStorage.getItem('lastpage') == null) {
                     this.router.navigate(['/home'], {replaceUrl: true});
+                 }else
+                 {
+                    this.router.navigate([localStorage.getItem('lastpage')], {replaceUrl: true});
                  }
             }
     );
@@ -30,7 +33,6 @@ export class LoginComponent implements OnInit {
   constructor(private authenticationService: AuthenticationService, private roleService: RoleService, private router: Router) { }
 
   ngOnInit(): void {
-    localStorage.clear();
   }
 
 }

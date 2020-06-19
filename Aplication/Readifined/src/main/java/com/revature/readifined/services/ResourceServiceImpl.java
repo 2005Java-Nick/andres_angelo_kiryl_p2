@@ -1,6 +1,7 @@
 package com.revature.readifined.services;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -76,7 +77,7 @@ public class ResourceServiceImpl implements ResourceService {
 			c.setText(r.getReviewBody());
 			c.setUsername(p.getUserName());
 			comments.add(c);
-		}	
+		}
 		return comments;
 	}
 

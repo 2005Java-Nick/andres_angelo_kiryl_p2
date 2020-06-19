@@ -36,7 +36,14 @@ export class RegisterationComponent implements OnInit {
                    if (!this.roleService.getCurrentRole().verified) {
                     this.router.navigate(['/registeration'], {replaceUrl: true});
                   }else{
-                    this.router.navigate(['/home'], {replaceUrl: true});
+                    if (localStorage.getItem('lastpage') == null)
+                    {
+                      this.router.navigate(['/home'], {replaceUrl: true});
+                    }
+                    else
+                    {
+                      this.router.navigate([localStorage.getItem('lastpage')], {replaceUrl: true});
+                    }
                   }
               }
       );

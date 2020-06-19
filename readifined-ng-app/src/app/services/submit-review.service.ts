@@ -13,7 +13,7 @@ export class SubmitReviewService {
 
   submitReview(review, rating, bookid)
   {
-    return this.http.post<string>
+    return this.http.post
     (
       this.REGISTER_URL,
       'review=' + review +
