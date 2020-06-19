@@ -17298,3 +17298,6 @@ INSERT INTO readifined.book_genre
 VALUES(1000, 33);
 
 select count(*) from readifined.book_genre;
+
+DELETE FROM readifined.book
+WHERE lower(cover_img) like '%null%';

@@ -9,14 +9,16 @@ import com.revature.readifined.dao.PersonDAOImpl;
 import com.revature.readifined.dao.RegisteredRoleDAOImpl;
 import com.revature.readifined.dao.RoleDAOImpl;
 import com.revature.readifined.domain.Book;
+import com.revature.readifined.domain.BookReviews;
+import com.revature.readifined.domain.Comment;
 import com.revature.readifined.domain.Genre;
 
 @Service
 public interface ResourceService {
 	
-	public void getComments();
 	public List<Genre> getAllGenres();
 	public List<Book> getAllBooks();
 	public List<Book> getAllBooksbyGenre(String genre);
+	public List<Comment> getReviews(int bookId);
 	
 }

@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.revature.readifined.domain.Book;
+import com.revature.readifined.domain.BookReviews;
+import com.revature.readifined.domain.Comment;
 import com.revature.readifined.domain.Genre;
 import com.revature.readifined.services.ResourceServiceImpl;
 
@@ -35,4 +37,11 @@ public class ResourceController {
 	public List<Book> getBooks(@RequestParam(name = "genre", required = true) String genre) {
 		return resourceServiceImpl.getAllBooksbyGenre(genre);
 	}
+	
+	@RequestMapping(path = "/reviews", method = RequestMethod.GET)
+	@ResponseBody
+	public List<Comment> getReviews(@RequestParam(name = "bookId", required = true) String bookId) {
+		return resourceServiceImpl.getReviews(Integer.parseInt(bookId));
+	}
+
 }
