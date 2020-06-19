@@ -48,6 +48,21 @@ public class BookReviewDAOImpl implements BookReviewDAO {
 		sess.close();
 		return list.get(0);
 	}
+	
+	@Override
+	public List<BookReviews> getBookReviews(int value, String column) {
+		Session sess = sf.openSession();
+		Transaction tx = sess.beginTransaction();
+		CriteriaBuilder cb = sess.getCriteriaBuilder();
+		CriteriaQuery<BookReviews> cq = cb.createQuery(BookReviews.class);
+		Root<BookReviews> rootEntry = cq.from(BookReviews.class);
+		CriteriaQuery<BookReviews> all = cq.select(rootEntry).where(cb.equal(rootEntry.get(column), value));
+		TypedQuery<BookReviews> allQuery = sess.createQuery(all);
+		List<BookReviews>list=allQuery.getResultList();
+		tx.commit();
+		sess.close();
+		return list;
+	}
 
 	@Override
 	public void saveBookReview(BookReviews br) {

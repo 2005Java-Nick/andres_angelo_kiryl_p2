@@ -842,3 +842,6 @@ INSERT INTO readifined.person
 VALUES('KARRY', 'THOMAS', 'K5344', 'THOMA7607', 'KATHOMA8260@gmail.com', '1989-11-14', '6394483591', '');
 
 select * from readifined.person;
+
+
+
